@@ -1,0 +1,467 @@
+\hypertarget{class_pastry}{}\doxysection{Pastry Class Reference}
+\label{class_pastry}\index{Pastry@{Pastry}}
+
+
+Class that manages the atributes of a real life pastry.  
+
+
+
+
+{\ttfamily \#include $<$Pastry.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pastry_a41e0246f921d7d80be43fb4eaf6da4e9}{Pastry}} ()
+\begin{DoxyCompactList}\small\item\em type of pastry we are having \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pastry_ade0d6640d8bcba0790a49141948f1506}{Pastry}} (string, string, int, float, float, \mbox{\hyperlink{_pastry_8h_a80b2749d65e68629ae17161b400c3cfc}{Pastry\+Type}})
+\begin{DoxyCompactList}\small\item\em A constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pastry_a50a400177d3dcc2f80d8e78b2a07c5a8}{Pastry}} (const \mbox{\hyperlink{class_pastry}{Pastry}} \&)
+\begin{DoxyCompactList}\small\item\em Copy constructor (Rule of 3). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pastry}{Pastry}} \& \mbox{\hyperlink{class_pastry_ac1d95ade2a05317ee7161cd4cf44afaa}{operator=}} (const \mbox{\hyperlink{class_pastry}{Pastry}} \&)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator (Rule of 3). \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pastry_ac0497c539d4d0e65e5c6b6086df3ac5d}{get\+Id}} () const
+\item 
+std\+::string \mbox{\hyperlink{class_pastry_a8d158bfa2411f0ce7cd71e4f71577bb5}{get\+Name}} () const
+\item 
+int \mbox{\hyperlink{class_pastry_acb30140719dccfcf71aaad84562943ca}{get\+Stock}} () const
+\item 
+float \mbox{\hyperlink{class_pastry_a21cbd9db9203edb70e2fd8f79cc942ff}{get\+Price}} () const
+\item 
+float \mbox{\hyperlink{class_pastry_a35ae86b840f08b0d1a058c18d1f9a2a7}{get\+Sugar}} () const
+\item 
+\mbox{\hyperlink{_pastry_8h_a80b2749d65e68629ae17161b400c3cfc}{Pastry\+Type}} \mbox{\hyperlink{class_pastry_a299ab02e2bac9ae285de9289e0123e31}{get\+Type}} () const
+\item 
+void \mbox{\hyperlink{class_pastry_afa6e14c2014b01a3fa27eb43056bd7bb}{set\+Name}} (const std\+::string)
+\item 
+void \mbox{\hyperlink{class_pastry_a80b5bc1d33bb45642cc6426f09fe8b7a}{set\+Stock}} (int)
+\item 
+void \mbox{\hyperlink{class_pastry_aef4ce692cef39f96015a30b817695246}{set\+Price}} (float)
+\item 
+void \mbox{\hyperlink{class_pastry_a6827aacf43b89e80dae885109c466cd8}{set\+Sugar}} (float)
+\item 
+\mbox{\hyperlink{class_pastry_ad850c987f39b8fe66f9d2da8e351ef7a}{$\sim$\+Pastry}} ()
+\begin{DoxyCompactList}\small\item\em A default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_pastry_aabd2a7bea02428df04db39fc4b49a826}{id}}
+\item 
+std\+::string \mbox{\hyperlink{class_pastry_a146e9edbfd9483dede66578c81aa3ca1}{name}}
+\begin{DoxyCompactList}\small\item\em id of the current pastry \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pastry_a7e2c0aad174f882dc91e261b6037be7c}{stock}}
+\begin{DoxyCompactList}\small\item\em comercial name of the pastry \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pastry_a7b5c16a956388e55f054bc2ac7e779cd}{price}}
+\begin{DoxyCompactList}\small\item\em number of pastries available at the store \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_pastry_a20a45f766dbc3be3de8a6ead83d57f23}{sugar}}
+\begin{DoxyCompactList}\small\item\em comercial price of the pastry \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_pastry_8h_a80b2749d65e68629ae17161b400c3cfc}{Pastry\+Type}} \mbox{\hyperlink{class_pastry_a4d1d73889bba94371d260867250657c5}{type}}
+\begin{DoxyCompactList}\small\item\em grams of sugar from the total composition \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{class_pastry_aaef0ac25936932549ab23f961447aba8}{operator$<$$<$}} (ostream \&, const \mbox{\hyperlink{class_pastry}{Pastry}} \&)
+\begin{DoxyCompactList}\small\item\em Overriden the output operator\end{DoxyCompactList}\item 
+istream \& \mbox{\hyperlink{class_pastry_a5d07880b486e06032b817b83a9375c5d}{operator$>$$>$}} (istream \&, \mbox{\hyperlink{class_pastry}{Pastry}} \&)
+\begin{DoxyCompactList}\small\item\em Overriden the input operator\end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pastry_a832beed7ee91e86861f453811ebb9234}{operator==}} (const \mbox{\hyperlink{class_pastry}{Pastry}} \&, const \mbox{\hyperlink{class_pastry}{Pastry}} \&)
+\begin{DoxyCompactList}\small\item\em Overriden the equality operator\end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pastry_a1435b58cbd0b93c04eb42e8282bffe83}{operator$<$}} (const \mbox{\hyperlink{class_pastry}{Pastry}} \&, const \mbox{\hyperlink{class_pastry}{Pastry}} \&)
+\begin{DoxyCompactList}\small\item\em Overriden the \texorpdfstring{$<$}{<} operatorThe function compares the 2 pastries soly based on their id. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pastry_af46178637f33533cbd850cb01161546f}{operator$>$}} (const \mbox{\hyperlink{class_pastry}{Pastry}} \&, const \mbox{\hyperlink{class_pastry}{Pastry}} \&)
+\begin{DoxyCompactList}\small\item\em Overriden the \texorpdfstring{$<$}{<} operatorThe function compares the 2 pastries soly based on their id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that manages the atributes of a real life pastry. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pastry_a41e0246f921d7d80be43fb4eaf6da4e9}\label{class_pastry_a41e0246f921d7d80be43fb4eaf6da4e9}} 
+\index{Pastry@{Pastry}!Pastry@{Pastry}}
+\index{Pastry@{Pastry}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{Pastry()}{Pastry()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Pastry\+::\+Pastry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+type of pastry we are having 
+
+A constructor.
+
+The default constructor. \mbox{\Hypertarget{class_pastry_ade0d6640d8bcba0790a49141948f1506}\label{class_pastry_ade0d6640d8bcba0790a49141948f1506}} 
+\index{Pastry@{Pastry}!Pastry@{Pastry}}
+\index{Pastry@{Pastry}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{Pastry()}{Pastry()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Pastry\+::\+Pastry (\begin{DoxyParamCaption}\item[{string}]{\+\_\+id,  }\item[{string}]{\+\_\+name,  }\item[{int}]{\+\_\+stock,  }\item[{float}]{\+\_\+price,  }\item[{float}]{\+\_\+sugar,  }\item[{\mbox{\hyperlink{_pastry_8h_a80b2749d65e68629ae17161b400c3cfc}{Pastry\+Type}}}]{\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+A constructor. 
+
+Creates a \mbox{\hyperlink{class_pastry}{Pastry}} with the paramters given 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+id} & id of the current pastry \\
+\hline
+{\em \+\_\+name} & comercial name of the pastry \\
+\hline
+{\em \+\_\+stock} & number of pastries available at the store \\
+\hline
+{\em \+\_\+price} & comercial price of the pastry \\
+\hline
+{\em \+\_\+sugar} & grams of sugar from the total compositio \\
+\hline
+{\em \+\_\+type} & type of pastry we are having \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pastry_a50a400177d3dcc2f80d8e78b2a07c5a8}\label{class_pastry_a50a400177d3dcc2f80d8e78b2a07c5a8}} 
+\index{Pastry@{Pastry}!Pastry@{Pastry}}
+\index{Pastry@{Pastry}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{Pastry()}{Pastry()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Pastry\+::\+Pastry (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pastry}{Pastry}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor (Rule of 3). 
+
+Used to create a pastry similar to the given one 
+\begin{DoxyParams}{Parameters}
+{\em other} & A pastry that should be copied \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pastry_ad850c987f39b8fe66f9d2da8e351ef7a}\label{class_pastry_ad850c987f39b8fe66f9d2da8e351ef7a}} 
+\index{Pastry@{Pastry}!````~Pastry@{$\sim$Pastry}}
+\index{````~Pastry@{$\sim$Pastry}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{$\sim$Pastry()}{~Pastry()}}
+{\footnotesize\ttfamily Pastry\+::$\sim$\+Pastry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A default constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pastry_ac0497c539d4d0e65e5c6b6086df3ac5d}\label{class_pastry_ac0497c539d4d0e65e5c6b6086df3ac5d}} 
+\index{Pastry@{Pastry}!getId@{getId}}
+\index{getId@{getId}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily std\+::string Pastry\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+
+
+\begin{DoxyReturn}{Returns}
+the id of the pastry 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pastry_a8d158bfa2411f0ce7cd71e4f71577bb5}\label{class_pastry_a8d158bfa2411f0ce7cd71e4f71577bb5}} 
+\index{Pastry@{Pastry}!getName@{getName}}
+\index{getName@{getName}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily std\+::string Pastry\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+
+
+\begin{DoxyReturn}{Returns}
+the comercial name of the pastry 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pastry_a21cbd9db9203edb70e2fd8f79cc942ff}\label{class_pastry_a21cbd9db9203edb70e2fd8f79cc942ff}} 
+\index{Pastry@{Pastry}!getPrice@{getPrice}}
+\index{getPrice@{getPrice}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{getPrice()}{getPrice()}}
+{\footnotesize\ttfamily float Pastry\+::get\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+
+
+\begin{DoxyReturn}{Returns}
+the comercial price of the pastry 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pastry_acb30140719dccfcf71aaad84562943ca}\label{class_pastry_acb30140719dccfcf71aaad84562943ca}} 
+\index{Pastry@{Pastry}!getStock@{getStock}}
+\index{getStock@{getStock}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{getStock()}{getStock()}}
+{\footnotesize\ttfamily int Pastry\+::get\+Stock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+
+
+\begin{DoxyReturn}{Returns}
+the current available stock of the pastry 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pastry_a35ae86b840f08b0d1a058c18d1f9a2a7}\label{class_pastry_a35ae86b840f08b0d1a058c18d1f9a2a7}} 
+\index{Pastry@{Pastry}!getSugar@{getSugar}}
+\index{getSugar@{getSugar}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{getSugar()}{getSugar()}}
+{\footnotesize\ttfamily float Pastry\+::get\+Sugar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+
+
+\begin{DoxyReturn}{Returns}
+the amount of sugar in the current pastry 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pastry_a299ab02e2bac9ae285de9289e0123e31}\label{class_pastry_a299ab02e2bac9ae285de9289e0123e31}} 
+\index{Pastry@{Pastry}!getType@{getType}}
+\index{getType@{getType}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_pastry_8h_a80b2749d65e68629ae17161b400c3cfc}{Pastry\+Type}} Pastry\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+
+
+\begin{DoxyReturn}{Returns}
+the type of pastry according to Pastry\+Type enum class 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pastry_ac1d95ade2a05317ee7161cd4cf44afaa}\label{class_pastry_ac1d95ade2a05317ee7161cd4cf44afaa}} 
+\index{Pastry@{Pastry}!operator=@{operator=}}
+\index{operator=@{operator=}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pastry}{Pastry}} \& Pastry\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pastry}{Pastry}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy assignment operator (Rule of 3). 
+
+Here we overriden the asigment operator 
+\begin{DoxyParams}{Parameters}
+{\em other} & A pastry that should be copied \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the newly formed pastry 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pastry_afa6e14c2014b01a3fa27eb43056bd7bb}\label{class_pastry_afa6e14c2014b01a3fa27eb43056bd7bb}} 
+\index{Pastry@{Pastry}!setName@{setName}}
+\index{setName@{setName}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Pastry\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string}]{other }\end{DoxyParamCaption})}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & the new name of the pastry \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pastry_aef4ce692cef39f96015a30b817695246}\label{class_pastry_aef4ce692cef39f96015a30b817695246}} 
+\index{Pastry@{Pastry}!setPrice@{setPrice}}
+\index{setPrice@{setPrice}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{setPrice()}{setPrice()}}
+{\footnotesize\ttfamily void Pastry\+::set\+Price (\begin{DoxyParamCaption}\item[{float}]{other }\end{DoxyParamCaption})}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & the new comercial price of the pastry \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pastry_a80b5bc1d33bb45642cc6426f09fe8b7a}\label{class_pastry_a80b5bc1d33bb45642cc6426f09fe8b7a}} 
+\index{Pastry@{Pastry}!setStock@{setStock}}
+\index{setStock@{setStock}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{setStock()}{setStock()}}
+{\footnotesize\ttfamily void Pastry\+::set\+Stock (\begin{DoxyParamCaption}\item[{int}]{other }\end{DoxyParamCaption})}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & the new available stock of the pastry \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pastry_a6827aacf43b89e80dae885109c466cd8}\label{class_pastry_a6827aacf43b89e80dae885109c466cd8}} 
+\index{Pastry@{Pastry}!setSugar@{setSugar}}
+\index{setSugar@{setSugar}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{setSugar()}{setSugar()}}
+{\footnotesize\ttfamily void Pastry\+::set\+Sugar (\begin{DoxyParamCaption}\item[{float}]{other }\end{DoxyParamCaption})}
+
+
+
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & the new amount of sugar in pastry \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_pastry_a1435b58cbd0b93c04eb42e8282bffe83}\label{class_pastry_a1435b58cbd0b93c04eb42e8282bffe83}} 
+\index{Pastry@{Pastry}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{operator$<$}{operator<}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pastry}{Pastry}} \&}]{Pastry1,  }\item[{const \mbox{\hyperlink{class_pastry}{Pastry}} \&}]{Pastry2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overriden the \texorpdfstring{$<$}{<} operatorThe function compares the 2 pastries soly based on their id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Pastry1} & \\
+\hline
+{\em Pastry2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pastry_aaef0ac25936932549ab23f961447aba8}\label{class_pastry_aaef0ac25936932549ab23f961447aba8}} 
+\index{Pastry@{Pastry}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_pastry}{Pastry}} \&}]{pastry }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overriden the output operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & ostrem \\
+\hline
+{\em pastry} & curent pastry \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ostream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pastry_a832beed7ee91e86861f453811ebb9234}\label{class_pastry_a832beed7ee91e86861f453811ebb9234}} 
+\index{Pastry@{Pastry}!operator==@{operator==}}
+\index{operator==@{operator==}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{operator==}{operator==}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pastry}{Pastry}} \&}]{Pastry1,  }\item[{const \mbox{\hyperlink{class_pastry}{Pastry}} \&}]{Pastry2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overriden the equality operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em Pastry1} & \\
+\hline
+{\em Pastry2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pastry_af46178637f33533cbd850cb01161546f}\label{class_pastry_af46178637f33533cbd850cb01161546f}} 
+\index{Pastry@{Pastry}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{operator$>$}{operator>}}
+{\footnotesize\ttfamily bool operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pastry}{Pastry}} \&}]{Pastry1,  }\item[{const \mbox{\hyperlink{class_pastry}{Pastry}} \&}]{Pastry2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overriden the \texorpdfstring{$<$}{<} operatorThe function compares the 2 pastries soly based on their id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Pastry1} & \\
+\hline
+{\em Pastry2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pastry_a5d07880b486e06032b817b83a9375c5d}\label{class_pastry_a5d07880b486e06032b817b83a9375c5d}} 
+\index{Pastry@{Pastry}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is,  }\item[{\mbox{\hyperlink{class_pastry}{Pastry}} \&}]{pastry }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overriden the input operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & istream \\
+\hline
+{\em pastry} & The pastry that is curently inputed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+is istream 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pastry_aabd2a7bea02428df04db39fc4b49a826}\label{class_pastry_aabd2a7bea02428df04db39fc4b49a826}} 
+\index{Pastry@{Pastry}!id@{id}}
+\index{id@{id}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily std\+::string Pastry\+::id\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_pastry_a146e9edbfd9483dede66578c81aa3ca1}\label{class_pastry_a146e9edbfd9483dede66578c81aa3ca1}} 
+\index{Pastry@{Pastry}!name@{name}}
+\index{name@{name}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Pastry\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+id of the current pastry 
+
+\mbox{\Hypertarget{class_pastry_a7b5c16a956388e55f054bc2ac7e779cd}\label{class_pastry_a7b5c16a956388e55f054bc2ac7e779cd}} 
+\index{Pastry@{Pastry}!price@{price}}
+\index{price@{price}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{price}{price}}
+{\footnotesize\ttfamily float Pastry\+::price\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+number of pastries available at the store 
+
+\mbox{\Hypertarget{class_pastry_a7e2c0aad174f882dc91e261b6037be7c}\label{class_pastry_a7e2c0aad174f882dc91e261b6037be7c}} 
+\index{Pastry@{Pastry}!stock@{stock}}
+\index{stock@{stock}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{stock}{stock}}
+{\footnotesize\ttfamily int Pastry\+::stock\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+comercial name of the pastry 
+
+\mbox{\Hypertarget{class_pastry_a20a45f766dbc3be3de8a6ead83d57f23}\label{class_pastry_a20a45f766dbc3be3de8a6ead83d57f23}} 
+\index{Pastry@{Pastry}!sugar@{sugar}}
+\index{sugar@{sugar}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{sugar}{sugar}}
+{\footnotesize\ttfamily float Pastry\+::sugar\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+comercial price of the pastry 
+
+\mbox{\Hypertarget{class_pastry_a4d1d73889bba94371d260867250657c5}\label{class_pastry_a4d1d73889bba94371d260867250657c5}} 
+\index{Pastry@{Pastry}!type@{type}}
+\index{type@{type}!Pastry@{Pastry}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_pastry_8h_a80b2749d65e68629ae17161b400c3cfc}{Pastry\+Type}} Pastry\+::type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+grams of sugar from the total composition 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Facultate/\+OOP SEM 2/\+Project\+\_\+\+Bakery/\+Project\+\_\+\+Bakery/\mbox{\hyperlink{_pastry_8h}{Pastry.\+h}}\item 
+D\+:/\+Facultate/\+OOP SEM 2/\+Project\+\_\+\+Bakery/\+Project\+\_\+\+Bakery/\mbox{\hyperlink{_pastry_8cpp}{Pastry.\+cpp}}\end{DoxyCompactItemize}

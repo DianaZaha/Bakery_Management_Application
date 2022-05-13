@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['salty_0',['salty',['../_pastry_8h.html#a80b2749d65e68629ae17161b400c3cfcadaf3ae813ad102e1014c6a5cb9b3a7fb',1,'Pastry.h']]],
+  ['search_1',['search',['../class_file_repo.html#af92c04a255f1ca5beba8ca25379264bc',1,'FileRepo::search()'],['../class_repo.html#a385b3a394f1149b0339d731ed70a4ac7',1,'Repo::search()']]],
+  ['setname_2',['setName',['../class_pastry.html#afa6e14c2014b01a3fa27eb43056bd7bb',1,'Pastry']]],
+  ['setprice_3',['setPrice',['../class_pastry.html#aef4ce692cef39f96015a30b817695246',1,'Pastry']]],
+  ['setstock_4',['setStock',['../class_pastry.html#a80b5bc1d33bb45642cc6426f09fe8b7a',1,'Pastry']]],
+  ['setsugar_5',['setSugar',['../class_pastry.html#a6827aacf43b89e80dae885109c466cd8',1,'Pastry']]],
+  ['size_6',['size',['../class_file_repo.html#ac0253bc8b0d6732469784f310ad87ebb',1,'FileRepo::size()'],['../class_repo.html#a923657efd2c9ff750a0df97fe6049b7f',1,'Repo::size()']]],
+  ['sort_7',['sort',['../class_repo.html#af841a260c991846c3b6bfdeff63a2c22',1,'Repo::sort()'],['../class_u_i.html#a45462e4102555b4688fcf4e0a85121d4',1,'UI::sort()']]],
+  ['sortbyname_8',['SortByName',['../class_sorting_criteria.html#aaf89e32d984d62853a0b5ac08f5d27b5',1,'SortingCriteria']]],
+  ['sortbyprice_9',['SortByPrice',['../class_sorting_criteria.html#ae6c7f51dd415132c136e2ff819c6e915',1,'SortingCriteria']]],
+  ['sortbystock_10',['SortByStock',['../class_sorting_criteria.html#ac864e3fa371184ed90247db97c17eec6',1,'SortingCriteria']]],
+  ['sortbysugar_11',['SortBySugar',['../class_sorting_criteria.html#a2a65d2cd6f2461c6abc06ab558dcc98e',1,'SortingCriteria']]],
+  ['sortbytype_12',['SortByType',['../class_sorting_criteria.html#ac6e77246ec8a78a5147430af32b8a9ea',1,'SortingCriteria']]],
+  ['sortingcriteria_13',['SortingCriteria',['../class_sorting_criteria.html',1,'SortingCriteria'],['../class_sorting_criteria.html#a40a5b2729eaff80f586b4565bd36ca71',1,'SortingCriteria::SortingCriteria()']]],
+  ['sortingcriteria_2ecpp_14',['SortingCriteria.cpp',['../_sorting_criteria_8cpp.html',1,'']]],
+  ['sortingcriteria_2eh_15',['SortingCriteria.h',['../_sorting_criteria_8h.html',1,'']]],
+  ['source_2ecpp_16',['Source.cpp',['../_source_8cpp.html',1,'']]],
+  ['stock_17',['stock',['../class_pastry.html#a7e2c0aad174f882dc91e261b6037be7c',1,'Pastry']]],
+  ['sugar_18',['sugar',['../class_pastry.html#a20a45f766dbc3be3de8a6ead83d57f23',1,'Pastry']]],
+  ['sweet_19',['sweet',['../_pastry_8h.html#a80b2749d65e68629ae17161b400c3cfcae549a200372db9f3fcfac9f384e4ac2d',1,'Pastry.h']]]
+];

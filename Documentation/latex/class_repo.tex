@@ -1,0 +1,238 @@
+\hypertarget{class_repo}{}\doxysection{Repo\texorpdfstring{$<$}{<} TElem \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_repo}\index{Repo$<$ TElem $>$@{Repo$<$ TElem $>$}}
+
+
+Class that manages a repository of an element.  
+
+
+
+
+{\ttfamily \#include $<$Repo.\+h$>$}
+
+Inheritance diagram for Repo\texorpdfstring{$<$}{<} TElem \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_repo}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_repo_ab31bb8ba6587dc14cf0cb81150bd6188}{Repo}} ()
+\begin{DoxyCompactList}\small\item\em a vector formed with the current elements \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_repo_aa2517887769520492361fd14538f2763}{add}} (const TElem \&elem)
+\begin{DoxyCompactList}\small\item\em adds an eleemnt to the current repository. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_repo_a372e46d5071fba43251d14ccb303aff3}{update}} (const TElem \&elem)
+\begin{DoxyCompactList}\small\item\em updates an eleemnt to the current repository. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_repo_a035ac7471966f1bd232c34112b705051}{remove}} (const TElem \&elem)
+\begin{DoxyCompactList}\small\item\em deletes an eleemnt to the current repository. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_repo_af841a260c991846c3b6bfdeff63a2c22}{sort}} ()
+\begin{DoxyCompactList}\small\item\em Sorts the current repository\end{DoxyCompactList}\item 
+virtual const TElem \& \mbox{\hyperlink{class_repo_a385b3a394f1149b0339d731ed70a4ac7}{search}} (const TElem \&elem)
+\begin{DoxyCompactList}\small\item\em Searches a given element in the current repository. \end{DoxyCompactList}\item 
+virtual const vector$<$ TElem $>$ \& \mbox{\hyperlink{class_repo_a88816b52884dfd26d8e7ffb76464a42d}{get\+\_\+all}} ()
+\begin{DoxyCompactList}\small\item\em Return a vector containing all the elements\end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_repo_a923657efd2c9ff750a0df97fe6049b7f}{size}} ()
+\begin{DoxyCompactList}\small\item\em Gives the number of elements in the current repository\end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_repo_a2a63a36695afba28684235dafef70b01}{$\sim$\+Repo}} ()
+\begin{DoxyCompactList}\small\item\em A default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ TElem $>$ \mbox{\hyperlink{class_repo_aa1e2c7ea0480d769ea19601329a41881}{elems}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename TElem$>$\newline
+class Repo$<$ TElem $>$}
+Class that manages a repository of an element. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_repo_ab31bb8ba6587dc14cf0cb81150bd6188}\label{class_repo_ab31bb8ba6587dc14cf0cb81150bd6188}} 
+\index{Repo$<$ TElem $>$@{Repo$<$ TElem $>$}!Repo@{Repo}}
+\index{Repo@{Repo}!Repo$<$ TElem $>$@{Repo$<$ TElem $>$}}
+\doxysubsubsection{\texorpdfstring{Repo()}{Repo()}}
+{\footnotesize\ttfamily template$<$typename TElem $>$ \\
+\mbox{\hyperlink{class_repo}{Repo}}$<$ TElem $>$\mbox{\hyperlink{class_repo}{\+::\+Repo}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+a vector formed with the current elements 
+
+A constructor.
+
+The default constructor. \mbox{\Hypertarget{class_repo_a2a63a36695afba28684235dafef70b01}\label{class_repo_a2a63a36695afba28684235dafef70b01}} 
+\index{Repo$<$ TElem $>$@{Repo$<$ TElem $>$}!````~Repo@{$\sim$Repo}}
+\index{````~Repo@{$\sim$Repo}!Repo$<$ TElem $>$@{Repo$<$ TElem $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Repo()}{~Repo()}}
+{\footnotesize\ttfamily template$<$typename TElem $>$ \\
+\mbox{\hyperlink{class_repo}{Repo}}$<$ TElem $>$\+::$\sim$\mbox{\hyperlink{class_repo}{Repo}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A default constructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_repo_aa2517887769520492361fd14538f2763}\label{class_repo_aa2517887769520492361fd14538f2763}} 
+\index{Repo$<$ TElem $>$@{Repo$<$ TElem $>$}!add@{add}}
+\index{add@{add}!Repo$<$ TElem $>$@{Repo$<$ TElem $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$typename TElem $>$ \\
+virtual void \mbox{\hyperlink{class_repo}{Repo}}$<$ TElem $>$\+::add (\begin{DoxyParamCaption}\item[{const TElem \&}]{elem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+adds an eleemnt to the current repository. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & the element to be added \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em error} & if the element already exists \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_file_repo_ae1ce2cb180f33e73285ea8157459a7b3}{File\+Repo$<$ Pastry $>$}}, and \mbox{\hyperlink{class_file_repo_ae1ce2cb180f33e73285ea8157459a7b3}{File\+Repo$<$ TElem $>$}}.
+
+\mbox{\Hypertarget{class_repo_a88816b52884dfd26d8e7ffb76464a42d}\label{class_repo_a88816b52884dfd26d8e7ffb76464a42d}} 
+\index{Repo$<$ TElem $>$@{Repo$<$ TElem $>$}!get\_all@{get\_all}}
+\index{get\_all@{get\_all}!Repo$<$ TElem $>$@{Repo$<$ TElem $>$}}
+\doxysubsubsection{\texorpdfstring{get\_all()}{get\_all()}}
+{\footnotesize\ttfamily template$<$typename TElem $>$ \\
+virtual const vector$<$ TElem $>$ \& \mbox{\hyperlink{class_repo}{Repo}}$<$ TElem $>$\+::get\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Return a vector containing all the elements
+
+\begin{DoxyReturn}{Returns}
+a vector containing all the elements in the repository 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_file_repo_a2a888736fe0c71be3954f9b862124aed}{File\+Repo$<$ TElem $>$}}, and \mbox{\hyperlink{class_file_repo_a2a888736fe0c71be3954f9b862124aed}{File\+Repo$<$ Pastry $>$}}.
+
+\mbox{\Hypertarget{class_repo_a035ac7471966f1bd232c34112b705051}\label{class_repo_a035ac7471966f1bd232c34112b705051}} 
+\index{Repo$<$ TElem $>$@{Repo$<$ TElem $>$}!remove@{remove}}
+\index{remove@{remove}!Repo$<$ TElem $>$@{Repo$<$ TElem $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename TElem $>$ \\
+virtual void \mbox{\hyperlink{class_repo}{Repo}}$<$ TElem $>$\+::remove (\begin{DoxyParamCaption}\item[{const TElem \&}]{elem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+deletes an eleemnt to the current repository. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & the element to be deleted \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em error} & if the element dooesn\textquotesingle{}t already exist \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_file_repo_a64f08c047743ab0986bef174a68aff39}{File\+Repo$<$ Pastry $>$}}, and \mbox{\hyperlink{class_file_repo_a64f08c047743ab0986bef174a68aff39}{File\+Repo$<$ TElem $>$}}.
+
+\mbox{\Hypertarget{class_repo_a385b3a394f1149b0339d731ed70a4ac7}\label{class_repo_a385b3a394f1149b0339d731ed70a4ac7}} 
+\index{Repo$<$ TElem $>$@{Repo$<$ TElem $>$}!search@{search}}
+\index{search@{search}!Repo$<$ TElem $>$@{Repo$<$ TElem $>$}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily template$<$typename TElem $>$ \\
+virtual const TElem \& \mbox{\hyperlink{class_repo}{Repo}}$<$ TElem $>$\+::search (\begin{DoxyParamCaption}\item[{const TElem \&}]{elem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Searches a given element in the current repository. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & the element searched \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the element if we found it or the NULL pointer if it not in the repository 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_file_repo_af92c04a255f1ca5beba8ca25379264bc}{File\+Repo$<$ Pastry $>$}}, and \mbox{\hyperlink{class_file_repo_af92c04a255f1ca5beba8ca25379264bc}{File\+Repo$<$ TElem $>$}}.
+
+\mbox{\Hypertarget{class_repo_a923657efd2c9ff750a0df97fe6049b7f}\label{class_repo_a923657efd2c9ff750a0df97fe6049b7f}} 
+\index{Repo$<$ TElem $>$@{Repo$<$ TElem $>$}!size@{size}}
+\index{size@{size}!Repo$<$ TElem $>$@{Repo$<$ TElem $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename TElem $>$ \\
+virtual int \mbox{\hyperlink{class_repo}{Repo}}$<$ TElem $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Gives the number of elements in the current repository
+
+\begin{DoxyReturn}{Returns}
+number of elements in the current repository 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_file_repo_ac0253bc8b0d6732469784f310ad87ebb}{File\+Repo$<$ TElem $>$}}, and \mbox{\hyperlink{class_file_repo_ac0253bc8b0d6732469784f310ad87ebb}{File\+Repo$<$ Pastry $>$}}.
+
+\mbox{\Hypertarget{class_repo_af841a260c991846c3b6bfdeff63a2c22}\label{class_repo_af841a260c991846c3b6bfdeff63a2c22}} 
+\index{Repo$<$ TElem $>$@{Repo$<$ TElem $>$}!sort@{sort}}
+\index{sort@{sort}!Repo$<$ TElem $>$@{Repo$<$ TElem $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily template$<$typename TElem $>$ \\
+virtual void \mbox{\hyperlink{class_repo}{Repo}}$<$ TElem $>$\+::sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sorts the current repository
+
+\mbox{\Hypertarget{class_repo_a372e46d5071fba43251d14ccb303aff3}\label{class_repo_a372e46d5071fba43251d14ccb303aff3}} 
+\index{Repo$<$ TElem $>$@{Repo$<$ TElem $>$}!update@{update}}
+\index{update@{update}!Repo$<$ TElem $>$@{Repo$<$ TElem $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily template$<$typename TElem $>$ \\
+virtual void \mbox{\hyperlink{class_repo}{Repo}}$<$ TElem $>$\+::update (\begin{DoxyParamCaption}\item[{const TElem \&}]{elem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+updates an eleemnt to the current repository. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & the element to be update already containing its new values \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em error} & if the element dooesn\textquotesingle{}t already exist \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \mbox{\hyperlink{class_file_repo_a445b07cb87bfdf3001c57f042a47a7d4}{File\+Repo$<$ Pastry $>$}}, and \mbox{\hyperlink{class_file_repo_a445b07cb87bfdf3001c57f042a47a7d4}{File\+Repo$<$ TElem $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_repo_aa1e2c7ea0480d769ea19601329a41881}\label{class_repo_aa1e2c7ea0480d769ea19601329a41881}} 
+\index{Repo$<$ TElem $>$@{Repo$<$ TElem $>$}!elems@{elems}}
+\index{elems@{elems}!Repo$<$ TElem $>$@{Repo$<$ TElem $>$}}
+\doxysubsubsection{\texorpdfstring{elems}{elems}}
+{\footnotesize\ttfamily template$<$typename TElem $>$ \\
+vector$<$TElem$>$ \mbox{\hyperlink{class_repo}{Repo}}$<$ TElem $>$\+::elems\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Facultate/\+OOP SEM 2/\+Project\+\_\+\+Bakery/\+Project\+\_\+\+Bakery/\mbox{\hyperlink{_repo_8h}{Repo.\+h}}\end{DoxyCompactItemize}

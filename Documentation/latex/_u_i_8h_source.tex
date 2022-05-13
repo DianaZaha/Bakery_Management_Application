@@ -1,0 +1,47 @@
+\hypertarget{_u_i_8h_source}{}\doxysection{UI.\+h}
+\label{_u_i_8h_source}\index{D:/Facultate/OOP SEM 2/Project\_Bakery/Project\_Bakery/UI.h@{D:/Facultate/OOP SEM 2/Project\_Bakery/Project\_Bakery/UI.h}}
+\mbox{\hyperlink{_u_i_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <stack>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{using }std::stack;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_file_repo_8h}{FileRepo.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_repo_8h}{Repo.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_pastry_8h}{Pastry.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_action_8h}{Action.h}}"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_filtering_criteria_8h}{FilteringCriteria.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_sorting_criteria_8h}{SortingCriteria.h}}"{}}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_u_i}{UI}}}
+\DoxyCodeLine{20 \{}
+\DoxyCodeLine{21 \textcolor{keyword}{private}:}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \mbox{\hyperlink{class_file_repo}{FileRepo<Pastry>}} \mbox{\hyperlink{class_u_i_a9834c2f707aa464eca51533ed8529ac3}{Bakery}}; }
+\DoxyCodeLine{25     \mbox{\hyperlink{class_pastry}{Pastry}} \mbox{\hyperlink{class_u_i_a85b4107e41cb682dd7f8d0a7379c9a03}{readPastry}}(std::string\&);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{comment}{//these do not need a undo/redo function}}
+\DoxyCodeLine{28     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_adf14b1da0e56294c06598ec7a49b4b93}{printmenu}}();}
+\DoxyCodeLine{29     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_aab9fee571a69435343e83c1b69f0e2ac}{printsortmenu}}();}
+\DoxyCodeLine{30     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_addbe4021b0a96a317ee54d9c95fea497}{printvector}}(\textcolor{keyword}{const} vector<Pastry>\&);}
+\DoxyCodeLine{31     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_ae53ae14fe08f966c8d9450dc3099a7c0}{printfiltermenu}}();}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_a971abd0fff22782d61a6ee17ba35a269}{filter}}();}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_a45462e4102555b4688fcf4e0a85121d4}{sort}}();}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{comment}{//these need a undo/redo function}}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_a164021d6ea129a7a6cf687fa57c1f7cf}{del}}(stack<\mbox{\hyperlink{class_action}{Action<Pastry>}}>\&);}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_a6ed839ea8b0e9ea12c67afaaa6ffd7db}{add}}(stack<\mbox{\hyperlink{class_action}{Action<Pastry>}}>\&);}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_a25b409e996a1b85a195a6b60f89cd349}{update}}(stack<\mbox{\hyperlink{class_action}{Action<Pastry>}}>\&);}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_ac5cc6be562f1df4f9a83757d79484f6c}{undo}}(\mbox{\hyperlink{class_action}{Action<Pastry>}}\&);}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_aba78b327bce67aa0c9b1cca3ca654fea}{redo}}(\mbox{\hyperlink{class_action}{Action<Pastry>}}\&);}
+\DoxyCodeLine{41 \textcolor{keyword}{public}:}
+\DoxyCodeLine{42     \mbox{\hyperlink{class_u_i_a675985a56b5e87ebdc8e5884b9f2ee09}{UI}}();}
+\DoxyCodeLine{43     \mbox{\hyperlink{class_u_i_a675985a56b5e87ebdc8e5884b9f2ee09}{UI}}(std::string);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_u_i_a00614394e78ce1e31b4e7495c686e721}{displayMenu}}();}
+\DoxyCodeLine{45 \};}
+
+\end{DoxyCode}

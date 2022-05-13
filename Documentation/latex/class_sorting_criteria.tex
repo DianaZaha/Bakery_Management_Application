@@ -1,0 +1,137 @@
+\hypertarget{class_sorting_criteria}{}\doxysection{Sorting\+Criteria Class Reference}
+\label{class_sorting_criteria}\index{SortingCriteria@{SortingCriteria}}
+
+
+Class that manages the sorting options on a \mbox{\hyperlink{class_repo}{Repo}}.  
+
+
+
+
+{\ttfamily \#include $<$Sorting\+Criteria.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sorting_criteria_a40a5b2729eaff80f586b4565bd36ca71}{Sorting\+Criteria}} (vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \&)
+\begin{DoxyCompactList}\small\item\em copy of the elements from the \mbox{\hyperlink{class_repo}{Repo}} we want filtered in a ceratin way \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \mbox{\hyperlink{class_sorting_criteria_aaf89e32d984d62853a0b5ac08f5d27b5}{Sort\+By\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Sorts the \mbox{\hyperlink{class_repo}{Repo}} in alphabetical order. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \mbox{\hyperlink{class_sorting_criteria_ac864e3fa371184ed90247db97c17eec6}{Sort\+By\+Stock}} ()
+\begin{DoxyCompactList}\small\item\em Sorts the \mbox{\hyperlink{class_repo}{Repo}} in ascending order based on stock. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \mbox{\hyperlink{class_sorting_criteria_ae6c7f51dd415132c136e2ff819c6e915}{Sort\+By\+Price}} ()
+\begin{DoxyCompactList}\small\item\em Sorts the \mbox{\hyperlink{class_repo}{Repo}} in ascending order based on price. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \mbox{\hyperlink{class_sorting_criteria_a2a65d2cd6f2461c6abc06ab558dcc98e}{Sort\+By\+Sugar}} ()
+\begin{DoxyCompactList}\small\item\em Sorts the \mbox{\hyperlink{class_repo}{Repo}} in ascending order based on Sugar. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \mbox{\hyperlink{class_sorting_criteria_ac6e77246ec8a78a5147430af32b8a9ea}{Sort\+By\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Sorts the \mbox{\hyperlink{class_repo}{Repo}} in alpabethical order based on Pastry\+Type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_repo}{Repo}}$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \mbox{\hyperlink{class_sorting_criteria_a9e7b15e2a51750c7f59552cf3e87a29c}{repo}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that manages the sorting options on a \mbox{\hyperlink{class_repo}{Repo}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sorting_criteria_a40a5b2729eaff80f586b4565bd36ca71}\label{class_sorting_criteria_a40a5b2729eaff80f586b4565bd36ca71}} 
+\index{SortingCriteria@{SortingCriteria}!SortingCriteria@{SortingCriteria}}
+\index{SortingCriteria@{SortingCriteria}!SortingCriteria@{SortingCriteria}}
+\doxysubsubsection{\texorpdfstring{SortingCriteria()}{SortingCriteria()}}
+{\footnotesize\ttfamily Sorting\+Criteria\+::\+Sorting\+Criteria (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \&}]{vector }\end{DoxyParamCaption})}
+
+
+
+copy of the elements from the \mbox{\hyperlink{class_repo}{Repo}} we want filtered in a ceratin way 
+
+A constructor Loads all the elements from the \mbox{\hyperlink{class_repo}{Repo}} into this Filter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & the vector from where we are going to copy all our elements \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sorting_criteria_aaf89e32d984d62853a0b5ac08f5d27b5}\label{class_sorting_criteria_aaf89e32d984d62853a0b5ac08f5d27b5}} 
+\index{SortingCriteria@{SortingCriteria}!SortByName@{SortByName}}
+\index{SortByName@{SortByName}!SortingCriteria@{SortingCriteria}}
+\doxysubsubsection{\texorpdfstring{SortByName()}{SortByName()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ Sorting\+Criteria\+::\+Sort\+By\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sorts the \mbox{\hyperlink{class_repo}{Repo}} in alphabetical order. 
+
+\begin{DoxyReturn}{Returns}
+a sorted vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sorting_criteria_ae6c7f51dd415132c136e2ff819c6e915}\label{class_sorting_criteria_ae6c7f51dd415132c136e2ff819c6e915}} 
+\index{SortingCriteria@{SortingCriteria}!SortByPrice@{SortByPrice}}
+\index{SortByPrice@{SortByPrice}!SortingCriteria@{SortingCriteria}}
+\doxysubsubsection{\texorpdfstring{SortByPrice()}{SortByPrice()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ Sorting\+Criteria\+::\+Sort\+By\+Price (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sorts the \mbox{\hyperlink{class_repo}{Repo}} in ascending order based on price. 
+
+\begin{DoxyReturn}{Returns}
+a sorted vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sorting_criteria_ac864e3fa371184ed90247db97c17eec6}\label{class_sorting_criteria_ac864e3fa371184ed90247db97c17eec6}} 
+\index{SortingCriteria@{SortingCriteria}!SortByStock@{SortByStock}}
+\index{SortByStock@{SortByStock}!SortingCriteria@{SortingCriteria}}
+\doxysubsubsection{\texorpdfstring{SortByStock()}{SortByStock()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ Sorting\+Criteria\+::\+Sort\+By\+Stock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sorts the \mbox{\hyperlink{class_repo}{Repo}} in ascending order based on stock. 
+
+\begin{DoxyReturn}{Returns}
+a sorted vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sorting_criteria_a2a65d2cd6f2461c6abc06ab558dcc98e}\label{class_sorting_criteria_a2a65d2cd6f2461c6abc06ab558dcc98e}} 
+\index{SortingCriteria@{SortingCriteria}!SortBySugar@{SortBySugar}}
+\index{SortBySugar@{SortBySugar}!SortingCriteria@{SortingCriteria}}
+\doxysubsubsection{\texorpdfstring{SortBySugar()}{SortBySugar()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ Sorting\+Criteria\+::\+Sort\+By\+Sugar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sorts the \mbox{\hyperlink{class_repo}{Repo}} in ascending order based on Sugar. 
+
+\begin{DoxyReturn}{Returns}
+a sorted vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sorting_criteria_ac6e77246ec8a78a5147430af32b8a9ea}\label{class_sorting_criteria_ac6e77246ec8a78a5147430af32b8a9ea}} 
+\index{SortingCriteria@{SortingCriteria}!SortByType@{SortByType}}
+\index{SortByType@{SortByType}!SortingCriteria@{SortingCriteria}}
+\doxysubsubsection{\texorpdfstring{SortByType()}{SortByType()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ Sorting\+Criteria\+::\+Sort\+By\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sorts the \mbox{\hyperlink{class_repo}{Repo}} in alpabethical order based on Pastry\+Type. 
+
+\begin{DoxyReturn}{Returns}
+a sorted vector 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sorting_criteria_a9e7b15e2a51750c7f59552cf3e87a29c}\label{class_sorting_criteria_a9e7b15e2a51750c7f59552cf3e87a29c}} 
+\index{SortingCriteria@{SortingCriteria}!repo@{repo}}
+\index{repo@{repo}!SortingCriteria@{SortingCriteria}}
+\doxysubsubsection{\texorpdfstring{repo}{repo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_repo}{Repo}}$<$\mbox{\hyperlink{class_pastry}{Pastry}}$>$ Sorting\+Criteria\+::repo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Facultate/\+OOP SEM 2/\+Project\+\_\+\+Bakery/\+Project\+\_\+\+Bakery/\mbox{\hyperlink{_sorting_criteria_8h}{Sorting\+Criteria.\+h}}\item 
+D\+:/\+Facultate/\+OOP SEM 2/\+Project\+\_\+\+Bakery/\+Project\+\_\+\+Bakery/\mbox{\hyperlink{_sorting_criteria_8cpp}{Sorting\+Criteria.\+cpp}}\end{DoxyCompactItemize}

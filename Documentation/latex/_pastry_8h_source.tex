@@ -1,0 +1,59 @@
+\hypertarget{_pastry_8h_source}{}\doxysection{Pastry.\+h}
+\label{_pastry_8h_source}\index{D:/Facultate/OOP SEM 2/Project\_Bakery/Project\_Bakery/Pastry.h@{D:/Facultate/OOP SEM 2/Project\_Bakery/Project\_Bakery/Pastry.h}}
+\mbox{\hyperlink{_pastry_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include<iostream>}}
+\DoxyCodeLine{5 \textcolor{keyword}{using }std::string;}
+\DoxyCodeLine{6 \textcolor{keyword}{using }std::istream;}
+\DoxyCodeLine{7 \textcolor{keyword}{using }std::ostream;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{12 \textcolor{keyword}{enum class} \mbox{\hyperlink{_pastry_8h_a80b2749d65e68629ae17161b400c3cfc}{PastryType}}\{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14     \mbox{\hyperlink{_pastry_8h_a80b2749d65e68629ae17161b400c3cfcadba7b12a19fe9d49fbb53d65c49bbce6}{bread}} = 0, }
+\DoxyCodeLine{15     \mbox{\hyperlink{_pastry_8h_a80b2749d65e68629ae17161b400c3cfcadaf3ae813ad102e1014c6a5cb9b3a7fb}{salty}} = 1, }
+\DoxyCodeLine{16     \mbox{\hyperlink{_pastry_8h_a80b2749d65e68629ae17161b400c3cfcae549a200372db9f3fcfac9f384e4ac2d}{sweet}} = 2, }
+\DoxyCodeLine{17 \};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{class_pastry}{Pastry}}}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24 \textcolor{keyword}{private}:}
+\DoxyCodeLine{25     std::string \mbox{\hyperlink{class_pastry_aabd2a7bea02428df04db39fc4b49a826}{id}}; }
+\DoxyCodeLine{26     std::string \mbox{\hyperlink{class_pastry_a146e9edbfd9483dede66578c81aa3ca1}{name}}; }
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_pastry_a7e2c0aad174f882dc91e261b6037be7c}{stock}};  }
+\DoxyCodeLine{28     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_pastry_a7b5c16a956388e55f054bc2ac7e779cd}{price}};  }
+\DoxyCodeLine{29     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_pastry_a20a45f766dbc3be3de8a6ead83d57f23}{sugar}}; }
+\DoxyCodeLine{30     \mbox{\hyperlink{_pastry_8h_a80b2749d65e68629ae17161b400c3cfc}{PastryType}} \mbox{\hyperlink{class_pastry_a4d1d73889bba94371d260867250657c5}{type}}; }
+\DoxyCodeLine{32 \textcolor{keyword}{public}:}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_pastry_a41e0246f921d7d80be43fb4eaf6da4e9}{Pastry}}();}
+\DoxyCodeLine{34     \mbox{\hyperlink{class_pastry_a41e0246f921d7d80be43fb4eaf6da4e9}{Pastry}}(\textcolor{keywordtype}{string}, \textcolor{keywordtype}{string}, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{float}, \textcolor{keywordtype}{float}, \mbox{\hyperlink{_pastry_8h_a80b2749d65e68629ae17161b400c3cfc}{PastryType}});}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \mbox{\hyperlink{class_pastry_a41e0246f921d7d80be43fb4eaf6da4e9}{Pastry}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_pastry}{Pastry}}\&);}
+\DoxyCodeLine{37     \mbox{\hyperlink{class_pastry}{Pastry}}\& \mbox{\hyperlink{class_pastry_ac1d95ade2a05317ee7161cd4cf44afaa}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_pastry}{Pastry}}\&);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     std::string \mbox{\hyperlink{class_pastry_ac0497c539d4d0e65e5c6b6086df3ac5d}{getId}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{40     std::string \mbox{\hyperlink{class_pastry_a8d158bfa2411f0ce7cd71e4f71577bb5}{getName}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{41     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_pastry_acb30140719dccfcf71aaad84562943ca}{getStock}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{42     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_pastry_a21cbd9db9203edb70e2fd8f79cc942ff}{getPrice}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{43     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_pastry_a35ae86b840f08b0d1a058c18d1f9a2a7}{getSugar}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{44     \mbox{\hyperlink{_pastry_8h_a80b2749d65e68629ae17161b400c3cfc}{PastryType}} \mbox{\hyperlink{class_pastry_a299ab02e2bac9ae285de9289e0123e31}{getType}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pastry_afa6e14c2014b01a3fa27eb43056bd7bb}{setName}}(\textcolor{keyword}{const} std::string);}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pastry_a80b5bc1d33bb45642cc6426f09fe8b7a}{setStock}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pastry_aef4ce692cef39f96015a30b817695246}{setPrice}}(\textcolor{keywordtype}{float});}
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_pastry_a6827aacf43b89e80dae885109c466cd8}{setSugar}}(\textcolor{keywordtype}{float});}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \textcolor{keyword}{friend} ostream\& \mbox{\hyperlink{class_pastry_aaef0ac25936932549ab23f961447aba8}{operator<<}}(ostream\&, \textcolor{keyword}{const} \mbox{\hyperlink{class_pastry}{Pastry}}\&);}
+\DoxyCodeLine{52     \textcolor{keyword}{friend} istream\& \mbox{\hyperlink{class_pastry_a5d07880b486e06032b817b83a9375c5d}{operator>>}}(istream\&, \mbox{\hyperlink{class_pastry}{Pastry}}\&);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{keyword}{friend} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_pastry_a832beed7ee91e86861f453811ebb9234}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_pastry}{Pastry}}\&, \textcolor{keyword}{const} \mbox{\hyperlink{class_pastry}{Pastry}}\&);}
+\DoxyCodeLine{55     \textcolor{keyword}{friend} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_pastry_a1435b58cbd0b93c04eb42e8282bffe83}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_pastry}{Pastry}}\&, \textcolor{keyword}{const} \mbox{\hyperlink{class_pastry}{Pastry}}\&);}
+\DoxyCodeLine{56     \textcolor{keyword}{friend} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_pastry_af46178637f33533cbd850cb01161546f}{operator>}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_pastry}{Pastry}}\&, \textcolor{keyword}{const} \mbox{\hyperlink{class_pastry}{Pastry}}\&);}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \mbox{\hyperlink{class_pastry_ad850c987f39b8fe66f9d2da8e351ef7a}{\string~Pastry}}();}
+\DoxyCodeLine{59 \};}
+\DoxyCodeLine{60 }
+
+\end{DoxyCode}

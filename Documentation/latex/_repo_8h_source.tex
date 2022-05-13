@@ -1,0 +1,70 @@
+\hypertarget{_repo_8h_source}{}\doxysection{Repo.\+h}
+\label{_repo_8h_source}\index{D:/Facultate/OOP SEM 2/Project\_Bakery/Project\_Bakery/Repo.h@{D:/Facultate/OOP SEM 2/Project\_Bakery/Project\_Bakery/Repo.h}}
+\mbox{\hyperlink{_repo_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <ostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_repo_exceptions_8h}{RepoExceptions.h}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{using }std::ostream;}
+\DoxyCodeLine{8 \textcolor{keyword}{using }std::vector;}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{13 \textcolor{keyword}{template} <\textcolor{keyword}{typename} TElem>}
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_repo}{Repo}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{16     vector<TElem> \mbox{\hyperlink{class_repo_aa1e2c7ea0480d769ea19601329a41881}{elems}}; }
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_repo_ab31bb8ba6587dc14cf0cb81150bd6188}{Repo}}() \{}
+\DoxyCodeLine{23     \};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{31     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_repo_aa2517887769520492361fd14538f2763}{add}}(\textcolor{keyword}{const} TElem\& elem) \{}
+\DoxyCodeLine{32         \textcolor{keyword}{auto} it = std::find(this-\/>elems.begin(), this-\/>elems.end(), elem);}
+\DoxyCodeLine{33         \textcolor{keywordflow}{if} (it != this-\/>elems.end()) \{}
+\DoxyCodeLine{34             \textcolor{keywordflow}{throw} \mbox{\hyperlink{class_repo_exception}{RepoException}}(\textcolor{stringliteral}{"{}existent elem!\(\backslash\)n"{}});}
+\DoxyCodeLine{35         \}}
+\DoxyCodeLine{36         this-\/>elems.push\_back(elem);}
+\DoxyCodeLine{37     \};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{46     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_repo_a372e46d5071fba43251d14ccb303aff3}{update}}(\textcolor{keyword}{const} TElem\& elem) \{}
+\DoxyCodeLine{47         \textcolor{keyword}{auto} it = std::find(this-\/>elems.begin(), this-\/>elems.end(), elem);}
+\DoxyCodeLine{48         \textcolor{keywordflow}{if} (it == this-\/>elems.end()) \{}
+\DoxyCodeLine{49             \textcolor{keywordflow}{throw} \mbox{\hyperlink{class_repo_exception}{RepoException}}(\textcolor{stringliteral}{"{}inexistent elem!\(\backslash\)n"{}});}
+\DoxyCodeLine{50         \}}
+\DoxyCodeLine{51         this-\/>elems[it -\/ this-\/>elems.begin()] = elem;}
+\DoxyCodeLine{52     \};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{60     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_repo_a035ac7471966f1bd232c34112b705051}{remove}}(\textcolor{keyword}{const} TElem\& elem) \{}
+\DoxyCodeLine{61         \textcolor{keyword}{auto} it = std::find(this-\/>elems.begin(), this-\/>elems.end(), elem);}
+\DoxyCodeLine{62         \textcolor{keywordflow}{if} (it == this-\/>elems.end()) \{}
+\DoxyCodeLine{63             \textcolor{keywordflow}{throw} \mbox{\hyperlink{class_repo_exception}{RepoException}}(\textcolor{stringliteral}{"{}elem inexistent!\(\backslash\)n"{}});}
+\DoxyCodeLine{64         \}}
+\DoxyCodeLine{65         this-\/>elems.erase(it);}
+\DoxyCodeLine{66     \};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{72     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_repo_af841a260c991846c3b6bfdeff63a2c22}{sort}}() \{}
+\DoxyCodeLine{73         std::sort(this-\/>elems.begin(), this-\/>elems.end());}
+\DoxyCodeLine{74     \};}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{82     \textcolor{keyword}{virtual} \textcolor{keyword}{const} TElem\& \mbox{\hyperlink{class_repo_a385b3a394f1149b0339d731ed70a4ac7}{search}}(\textcolor{keyword}{const} TElem\& elem) \{}
+\DoxyCodeLine{83         \textcolor{keyword}{auto} it = std::find(this-\/>elems.begin(), this-\/>elems.end(), elem);}
+\DoxyCodeLine{84         \textcolor{keywordflow}{if} (it == this-\/>elems.end()) \{}
+\DoxyCodeLine{85             \textcolor{keywordflow}{throw} \mbox{\hyperlink{class_repo_exception}{RepoException}}(\textcolor{stringliteral}{"{}elem inexistent!\(\backslash\)n"{}});}
+\DoxyCodeLine{86         \}}
+\DoxyCodeLine{87         \textcolor{keywordflow}{return} *it;}
+\DoxyCodeLine{88     \};}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{95     \textcolor{keyword}{virtual} \textcolor{keyword}{const} vector<TElem>\& \mbox{\hyperlink{class_repo_a88816b52884dfd26d8e7ffb76464a42d}{get\_all}}() \{}
+\DoxyCodeLine{96         \textcolor{keywordflow}{return} this-\/>\mbox{\hyperlink{class_repo_aa1e2c7ea0480d769ea19601329a41881}{elems}};}
+\DoxyCodeLine{97     \};}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{104     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_repo_a923657efd2c9ff750a0df97fe6049b7f}{size}}() \{}
+\DoxyCodeLine{105         \textcolor{keywordflow}{return} this-\/>elems.size();}
+\DoxyCodeLine{106     \};}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{112     \mbox{\hyperlink{class_repo_a2a63a36695afba28684235dafef70b01}{\string~Repo}}() \{}
+\DoxyCodeLine{113     \};}
+\DoxyCodeLine{114 \};}
+
+\end{DoxyCode}

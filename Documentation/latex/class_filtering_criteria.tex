@@ -1,0 +1,160 @@
+\hypertarget{class_filtering_criteria}{}\doxysection{Filtering\+Criteria Class Reference}
+\label{class_filtering_criteria}\index{FilteringCriteria@{FilteringCriteria}}
+
+
+Class that manages the filtering options on a \mbox{\hyperlink{class_repo}{Repo}}.  
+
+
+
+
+{\ttfamily \#include $<$Filtering\+Criteria.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_filtering_criteria_ad97602e7ed06353068e68304a144467e}{Filtering\+Criteria}} (vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \&)
+\begin{DoxyCompactList}\small\item\em A constructorLoads all the elements from the \mbox{\hyperlink{class_repo}{Repo}} into this Filter. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \mbox{\hyperlink{class_filtering_criteria_a17d56d42cc737082a81075ad055a7720}{Filter\+By\+Name}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em Creates a vector with Pastries that have a certain name. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \mbox{\hyperlink{class_filtering_criteria_a130aedc8510016c6b4f4fb90b1673dcf}{Filter\+By\+Stock}} (int)
+\begin{DoxyCompactList}\small\item\em Creates a vector with Pastries that have the stock lower then a certain amount. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \mbox{\hyperlink{class_filtering_criteria_acb7eb71ee77f4c71f45637e7fb621441}{Filter\+By\+Price}} (float)
+\begin{DoxyCompactList}\small\item\em Creates a vector with Pastries that have the price lower then a certain amount. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \mbox{\hyperlink{class_filtering_criteria_aaff9e84ac206fba7192dd39d47ab1b15}{Filter\+By\+Sugar}} (float)
+\begin{DoxyCompactList}\small\item\em Creates a vector with Pastries that have a stock lower then a certain amount. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \mbox{\hyperlink{class_filtering_criteria_adb3e6b2d13ca7bd02becef7e781ab958}{Filter\+By\+Type}} (\mbox{\hyperlink{_pastry_8h_a80b2749d65e68629ae17161b400c3cfc}{Pastry\+Type}})
+\begin{DoxyCompactList}\small\item\em Creates a vector with Pastries that have a stock lower then a certain amount. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_repo}{Repo}}$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \mbox{\hyperlink{class_filtering_criteria_ae5372e1758ed830b898cb61e394ac38c}{repo}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that manages the filtering options on a \mbox{\hyperlink{class_repo}{Repo}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_filtering_criteria_ad97602e7ed06353068e68304a144467e}\label{class_filtering_criteria_ad97602e7ed06353068e68304a144467e}} 
+\index{FilteringCriteria@{FilteringCriteria}!FilteringCriteria@{FilteringCriteria}}
+\index{FilteringCriteria@{FilteringCriteria}!FilteringCriteria@{FilteringCriteria}}
+\doxysubsubsection{\texorpdfstring{FilteringCriteria()}{FilteringCriteria()}}
+{\footnotesize\ttfamily Filtering\+Criteria\+::\+Filtering\+Criteria (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \&}]{vector }\end{DoxyParamCaption})}
+
+
+
+A constructorLoads all the elements from the \mbox{\hyperlink{class_repo}{Repo}} into this Filter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & the vector from where we are going to copy all our elements \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_filtering_criteria_a17d56d42cc737082a81075ad055a7720}\label{class_filtering_criteria_a17d56d42cc737082a81075ad055a7720}} 
+\index{FilteringCriteria@{FilteringCriteria}!FilterByName@{FilterByName}}
+\index{FilterByName@{FilterByName}!FilteringCriteria@{FilteringCriteria}}
+\doxysubsubsection{\texorpdfstring{FilterByName()}{FilterByName()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ Filtering\+Criteria\+::\+Filter\+By\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Creates a vector with Pastries that have a certain name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+name,the} & name we search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector with all the \mbox{\hyperlink{class_pastry}{Pastry}} that match the name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_filtering_criteria_acb7eb71ee77f4c71f45637e7fb621441}\label{class_filtering_criteria_acb7eb71ee77f4c71f45637e7fb621441}} 
+\index{FilteringCriteria@{FilteringCriteria}!FilterByPrice@{FilterByPrice}}
+\index{FilterByPrice@{FilterByPrice}!FilteringCriteria@{FilteringCriteria}}
+\doxysubsubsection{\texorpdfstring{FilterByPrice()}{FilterByPrice()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ Filtering\+Criteria\+::\+Filter\+By\+Price (\begin{DoxyParamCaption}\item[{float}]{\+\_\+price }\end{DoxyParamCaption})}
+
+
+
+Creates a vector with Pastries that have the price lower then a certain amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+price,the} & amount we search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector with all the \mbox{\hyperlink{class_pastry}{Pastry}} that match the criteria 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_filtering_criteria_a130aedc8510016c6b4f4fb90b1673dcf}\label{class_filtering_criteria_a130aedc8510016c6b4f4fb90b1673dcf}} 
+\index{FilteringCriteria@{FilteringCriteria}!FilterByStock@{FilterByStock}}
+\index{FilterByStock@{FilterByStock}!FilteringCriteria@{FilteringCriteria}}
+\doxysubsubsection{\texorpdfstring{FilterByStock()}{FilterByStock()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ Filtering\+Criteria\+::\+Filter\+By\+Stock (\begin{DoxyParamCaption}\item[{int}]{\+\_\+stock }\end{DoxyParamCaption})}
+
+
+
+Creates a vector with Pastries that have the stock lower then a certain amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+stock,the} & amount we search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector with all the \mbox{\hyperlink{class_pastry}{Pastry}} that match the criteria 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_filtering_criteria_aaff9e84ac206fba7192dd39d47ab1b15}\label{class_filtering_criteria_aaff9e84ac206fba7192dd39d47ab1b15}} 
+\index{FilteringCriteria@{FilteringCriteria}!FilterBySugar@{FilterBySugar}}
+\index{FilterBySugar@{FilterBySugar}!FilteringCriteria@{FilteringCriteria}}
+\doxysubsubsection{\texorpdfstring{FilterBySugar()}{FilterBySugar()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ Filtering\+Criteria\+::\+Filter\+By\+Sugar (\begin{DoxyParamCaption}\item[{float}]{\+\_\+sugar }\end{DoxyParamCaption})}
+
+
+
+Creates a vector with Pastries that have a stock lower then a certain amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+stock,the} & amount we search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector with all the \mbox{\hyperlink{class_pastry}{Pastry}} that match the criteria 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_filtering_criteria_adb3e6b2d13ca7bd02becef7e781ab958}\label{class_filtering_criteria_adb3e6b2d13ca7bd02becef7e781ab958}} 
+\index{FilteringCriteria@{FilteringCriteria}!FilterByType@{FilterByType}}
+\index{FilterByType@{FilterByType}!FilteringCriteria@{FilteringCriteria}}
+\doxysubsubsection{\texorpdfstring{FilterByType()}{FilterByType()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ Filtering\+Criteria\+::\+Filter\+By\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_pastry_8h_a80b2749d65e68629ae17161b400c3cfc}{Pastry\+Type}}}]{\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Creates a vector with Pastries that have a stock lower then a certain amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+stock,the} & amount we search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector with all the \mbox{\hyperlink{class_pastry}{Pastry}} that match the criteria 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_filtering_criteria_ae5372e1758ed830b898cb61e394ac38c}\label{class_filtering_criteria_ae5372e1758ed830b898cb61e394ac38c}} 
+\index{FilteringCriteria@{FilteringCriteria}!repo@{repo}}
+\index{repo@{repo}!FilteringCriteria@{FilteringCriteria}}
+\doxysubsubsection{\texorpdfstring{repo}{repo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_repo}{Repo}}$<$\mbox{\hyperlink{class_pastry}{Pastry}}$>$ Filtering\+Criteria\+::repo\hspace{0.3cm}{\ttfamily [private]}}
+
+the basically a copy of the elements from the \mbox{\hyperlink{class_repo}{Repo}} we want filtered in a ceratin way 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Facultate/\+OOP SEM 2/\+Project\+\_\+\+Bakery/\+Project\+\_\+\+Bakery/\mbox{\hyperlink{_filtering_criteria_8h}{Filtering\+Criteria.\+h}}\item 
+D\+:/\+Facultate/\+OOP SEM 2/\+Project\+\_\+\+Bakery/\+Project\+\_\+\+Bakery/\mbox{\hyperlink{_filtering_criteria_8cpp}{Filtering\+Criteria.\+cpp}}\end{DoxyCompactItemize}

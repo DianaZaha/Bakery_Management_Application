@@ -1,0 +1,285 @@
+\hypertarget{class_u_i}{}\doxysection{UI Class Reference}
+\label{class_u_i}\index{UI@{UI}}
+
+
+Class that manages the User Interface in the Console.  
+
+
+
+
+{\ttfamily \#include $<$UI.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_a675985a56b5e87ebdc8e5884b9f2ee09}{UI}} ()
+\begin{DoxyCompactList}\small\item\em The default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_u_i_a8ef553037577b700d5d56d0a15079eef}{UI}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em A constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_a00614394e78ce1e31b4e7495c686e721}{display\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Calls the functions which perform the desired operation on \mbox{\hyperlink{class_file_repo}{File\+Repo}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pastry}{Pastry}} \mbox{\hyperlink{class_u_i_a85b4107e41cb682dd7f8d0a7379c9a03}{read\+Pastry}} (std\+::string \&)
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_file_repo}{File\+Repo}} that this \mbox{\hyperlink{class_u_i}{UI}} allows the user to perform operations on. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_a971abd0fff22782d61a6ee17ba35a269}{filter}} ()
+\begin{DoxyCompactList}\small\item\em Filters the elements currently present in the CSV\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_a45462e4102555b4688fcf4e0a85121d4}{sort}} ()
+\begin{DoxyCompactList}\small\item\em Sorts the elements currently present in the CSV\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_a164021d6ea129a7a6cf687fa57c1f7cf}{del}} (stack$<$ \mbox{\hyperlink{class_action}{Action}}$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ $>$ \&)
+\begin{DoxyCompactList}\small\item\em Removes a \mbox{\hyperlink{class_pastry}{Pastry}} from the \mbox{\hyperlink{class_file_repo}{File\+Repo}}It asks the user for an Id and creates a dummy \mbox{\hyperlink{class_pastry}{Pastry}} with that it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_a6ed839ea8b0e9ea12c67afaaa6ffd7db}{add}} (stack$<$ \mbox{\hyperlink{class_action}{Action}}$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ $>$ \&)
+\begin{DoxyCompactList}\small\item\em Adds new pastry to the \mbox{\hyperlink{class_file_repo}{File\+Repo}}It reads a line from the user then creates a \mbox{\hyperlink{class_pastry}{Pastry}} to match it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_a25b409e996a1b85a195a6b60f89cd349}{update}} (stack$<$ \mbox{\hyperlink{class_action}{Action}}$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ $>$ \&)
+\begin{DoxyCompactList}\small\item\em Updates a \mbox{\hyperlink{class_pastry}{Pastry}} with new StatsIt read a line from the user and transforms it into a \mbox{\hyperlink{class_pastry}{Pastry}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_ac5cc6be562f1df4f9a83757d79484f6c}{undo}} (\mbox{\hyperlink{class_action}{Action}}$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \&)
+\begin{DoxyCompactList}\small\item\em Used to undo an action. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_u_i_aba78b327bce67aa0c9b1cca3ca654fea}{redo}} (\mbox{\hyperlink{class_action}{Action}}$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \&)
+\begin{DoxyCompactList}\small\item\em Used to redo an action. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_u_i_adf14b1da0e56294c06598ec7a49b4b93}{printmenu}} ()
+\begin{DoxyCompactList}\small\item\em Shows the Main Menu to the user. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_u_i_aab9fee571a69435343e83c1b69f0e2ac}{printsortmenu}} ()
+\begin{DoxyCompactList}\small\item\em Shows the Sorting Menu to the user. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_u_i_addbe4021b0a96a317ee54d9c95fea497}{printvector}} (const vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \&)
+\begin{DoxyCompactList}\small\item\em Prints all the elemets from the vector in the console. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_u_i_ae53ae14fe08f966c8d9450dc3099a7c0}{printfiltermenu}} ()
+\begin{DoxyCompactList}\small\item\em Shows the Filtering Menu to the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_file_repo}{File\+Repo}}$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \mbox{\hyperlink{class_u_i_a9834c2f707aa464eca51533ed8529ac3}{Bakery}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that manages the User Interface in the Console. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_i_a675985a56b5e87ebdc8e5884b9f2ee09}\label{class_u_i_a675985a56b5e87ebdc8e5884b9f2ee09}} 
+\index{UI@{UI}!UI@{UI}}
+\index{UI@{UI}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{UI()}{UI()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily UI\+::\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The default constructor. 
+
+\mbox{\Hypertarget{class_u_i_a8ef553037577b700d5d56d0a15079eef}\label{class_u_i_a8ef553037577b700d5d56d0a15079eef}} 
+\index{UI@{UI}!UI@{UI}}
+\index{UI@{UI}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{UI()}{UI()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily UI\+::\+UI (\begin{DoxyParamCaption}\item[{std\+::string}]{filepath }\end{DoxyParamCaption})}
+
+
+
+A constructor. 
+
+Takes the filepath given and creates a \mbox{\hyperlink{class_file_repo}{File\+Repo}} on which the \mbox{\hyperlink{class_u_i}{UI}} will operate \begin{DoxyNote}{Note}
+The user can only modify the content from the CSV given only at add, delete, update, \mbox{\hyperlink{class_u_i_ac5cc6be562f1df4f9a83757d79484f6c}{undo()}} and \mbox{\hyperlink{class_u_i_aba78b327bce67aa0c9b1cca3ca654fea}{redo()}} 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & the filepath to the CSV document that the \mbox{\hyperlink{class_u_i}{UI}} operates on \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_i_a6ed839ea8b0e9ea12c67afaaa6ffd7db}\label{class_u_i_a6ed839ea8b0e9ea12c67afaaa6ffd7db}} 
+\index{UI@{UI}!add@{add}}
+\index{add@{add}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void UI\+::add (\begin{DoxyParamCaption}\item[{stack$<$ \mbox{\hyperlink{class_action}{Action}}$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ $>$ \&}]{Undo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Adds new pastry to the \mbox{\hyperlink{class_file_repo}{File\+Repo}}It reads a line from the user then creates a \mbox{\hyperlink{class_pastry}{Pastry}} to match it. 
+
+It tries to add the \mbox{\hyperlink{class_pastry}{Pastry}} in the \mbox{\hyperlink{class_file_repo}{File\+Repo}}. If the \mbox{\hyperlink{class_pastry}{Pastry}} is already there, it will warn the user. Then is adds to the top of the stack of Undo actions the actions it just performed,
+
+
+\begin{DoxyParams}{Parameters}
+{\em Undo} & the stack of action previously taken by the user on the \mbox{\hyperlink{class_file_repo}{File\+Repo}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_i_a164021d6ea129a7a6cf687fa57c1f7cf}\label{class_u_i_a164021d6ea129a7a6cf687fa57c1f7cf}} 
+\index{UI@{UI}!del@{del}}
+\index{del@{del}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{del()}{del()}}
+{\footnotesize\ttfamily void UI\+::del (\begin{DoxyParamCaption}\item[{stack$<$ \mbox{\hyperlink{class_action}{Action}}$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ $>$ \&}]{Undo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Removes a \mbox{\hyperlink{class_pastry}{Pastry}} from the \mbox{\hyperlink{class_file_repo}{File\+Repo}}It asks the user for an Id and creates a dummy \mbox{\hyperlink{class_pastry}{Pastry}} with that it. 
+
+The dummy is passed to the remove function which only compares the Id\textquotesingle{}s of the Pastries. If the \mbox{\hyperlink{class_pastry}{Pastry}} is not already there, it will warn the user. Then we add to the top of the stack of Undo actions the actions it just performed. 
+\begin{DoxyParams}{Parameters}
+{\em Undo} & the stack of action previously taken by the user on he \mbox{\hyperlink{class_file_repo}{File\+Repo}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_i_a00614394e78ce1e31b4e7495c686e721}\label{class_u_i_a00614394e78ce1e31b4e7495c686e721}} 
+\index{UI@{UI}!displayMenu@{displayMenu}}
+\index{displayMenu@{displayMenu}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{displayMenu()}{displayMenu()}}
+{\footnotesize\ttfamily void UI\+::display\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Calls the functions which perform the desired operation on \mbox{\hyperlink{class_file_repo}{File\+Repo}}. 
+
+This function allows the user to input a character that will lead to an action being performed on the \mbox{\hyperlink{class_file_repo}{File\+Repo}} The user can add, delete, update, an element , these action can be reversed by using undo and redo The user can sort and filter the elements but the data from the CSV file won\textquotesingle{}t be changed \mbox{\Hypertarget{class_u_i_a971abd0fff22782d61a6ee17ba35a269}\label{class_u_i_a971abd0fff22782d61a6ee17ba35a269}} 
+\index{UI@{UI}!filter@{filter}}
+\index{filter@{filter}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{filter()}{filter()}}
+{\footnotesize\ttfamily void UI\+::filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Filters the elements currently present in the CSV
+
+\begin{DoxyNote}{Note}
+This doesn\textquotesingle{}t affect the elements in the CSV 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_u_i_ae53ae14fe08f966c8d9450dc3099a7c0}\label{class_u_i_ae53ae14fe08f966c8d9450dc3099a7c0}} 
+\index{UI@{UI}!printfiltermenu@{printfiltermenu}}
+\index{printfiltermenu@{printfiltermenu}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{printfiltermenu()}{printfiltermenu()}}
+{\footnotesize\ttfamily void UI\+::printfiltermenu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Shows the Filtering Menu to the user. 
+
+\mbox{\Hypertarget{class_u_i_adf14b1da0e56294c06598ec7a49b4b93}\label{class_u_i_adf14b1da0e56294c06598ec7a49b4b93}} 
+\index{UI@{UI}!printmenu@{printmenu}}
+\index{printmenu@{printmenu}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{printmenu()}{printmenu()}}
+{\footnotesize\ttfamily void UI\+::printmenu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Shows the Main Menu to the user. 
+
+\mbox{\Hypertarget{class_u_i_aab9fee571a69435343e83c1b69f0e2ac}\label{class_u_i_aab9fee571a69435343e83c1b69f0e2ac}} 
+\index{UI@{UI}!printsortmenu@{printsortmenu}}
+\index{printsortmenu@{printsortmenu}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{printsortmenu()}{printsortmenu()}}
+{\footnotesize\ttfamily void UI\+::printsortmenu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Shows the Sorting Menu to the user. 
+
+\mbox{\Hypertarget{class_u_i_addbe4021b0a96a317ee54d9c95fea497}\label{class_u_i_addbe4021b0a96a317ee54d9c95fea497}} 
+\index{UI@{UI}!printvector@{printvector}}
+\index{printvector@{printvector}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{printvector()}{printvector()}}
+{\footnotesize\ttfamily void UI\+::printvector (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \&}]{vector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Prints all the elemets from the vector in the console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vector} & the vector whose elements we want to print in the console \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_i_a85b4107e41cb682dd7f8d0a7379c9a03}\label{class_u_i_a85b4107e41cb682dd7f8d0a7379c9a03}} 
+\index{UI@{UI}!readPastry@{readPastry}}
+\index{readPastry@{readPastry}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{readPastry()}{readPastry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_pastry}{Pastry}} UI\+::read\+Pastry (\begin{DoxyParamCaption}\item[{std\+::string \&}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The \mbox{\hyperlink{class_file_repo}{File\+Repo}} that this \mbox{\hyperlink{class_u_i}{UI}} allows the user to perform operations on. 
+
+Creates from a line a \mbox{\hyperlink{class_pastry}{Pastry}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & the line readen from keyboard \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The newly formed \mbox{\hyperlink{class_pastry}{Pastry}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_i_aba78b327bce67aa0c9b1cca3ca654fea}\label{class_u_i_aba78b327bce67aa0c9b1cca3ca654fea}} 
+\index{UI@{UI}!redo@{redo}}
+\index{redo@{redo}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{redo()}{redo()}}
+{\footnotesize\ttfamily void UI\+::redo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_action}{Action}}$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \&}]{Act }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Used to redo an action. 
+
+To redo is just and undo of an undo, so we have to act accordingly to the indicated Action\+Type 
+\begin{DoxyParams}{Parameters}
+{\em Act} & the action that should be redone \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_i_a45462e4102555b4688fcf4e0a85121d4}\label{class_u_i_a45462e4102555b4688fcf4e0a85121d4}} 
+\index{UI@{UI}!sort@{sort}}
+\index{sort@{sort}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily void UI\+::sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sorts the elements currently present in the CSV
+
+\begin{DoxyNote}{Note}
+This doesn\textquotesingle{}t affect the elements in the CSV 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_u_i_ac5cc6be562f1df4f9a83757d79484f6c}\label{class_u_i_ac5cc6be562f1df4f9a83757d79484f6c}} 
+\index{UI@{UI}!undo@{undo}}
+\index{undo@{undo}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily void UI\+::undo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_action}{Action}}$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ \&}]{Act }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Used to undo an action. 
+
+To undo an action you have to do the oposite of the action given, accordingly to the indicated Action\+Type 
+\begin{DoxyParams}{Parameters}
+{\em Act} & the action that should be undone \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_i_a25b409e996a1b85a195a6b60f89cd349}\label{class_u_i_a25b409e996a1b85a195a6b60f89cd349}} 
+\index{UI@{UI}!update@{update}}
+\index{update@{update}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void UI\+::update (\begin{DoxyParamCaption}\item[{stack$<$ \mbox{\hyperlink{class_action}{Action}}$<$ \mbox{\hyperlink{class_pastry}{Pastry}} $>$ $>$ \&}]{Undo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates a \mbox{\hyperlink{class_pastry}{Pastry}} with new StatsIt read a line from the user and transforms it into a \mbox{\hyperlink{class_pastry}{Pastry}}. 
+
+The \mbox{\hyperlink{class_pastry}{Pastry}} that have been read must have the Id of one of the \mbox{\hyperlink{class_pastry}{Pastry}} in the \mbox{\hyperlink{class_file_repo}{File\+Repo}}. If it doesn\textquotesingle{}t exsit such a pastry, the user will be warned. If the change have been made usccesfully, it adds the action and both the new and the old element to the Undo Stack. 
+\begin{DoxyParams}{Parameters}
+{\em Undo} & the stack of action previously taken by the user on he \mbox{\hyperlink{class_file_repo}{File\+Repo}} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_i_a9834c2f707aa464eca51533ed8529ac3}\label{class_u_i_a9834c2f707aa464eca51533ed8529ac3}} 
+\index{UI@{UI}!Bakery@{Bakery}}
+\index{Bakery@{Bakery}!UI@{UI}}
+\doxysubsubsection{\texorpdfstring{Bakery}{Bakery}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_file_repo}{File\+Repo}}$<$\mbox{\hyperlink{class_pastry}{Pastry}}$>$ UI\+::\+Bakery\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Facultate/\+OOP SEM 2/\+Project\+\_\+\+Bakery/\+Project\+\_\+\+Bakery/\mbox{\hyperlink{_u_i_8h}{UI.\+h}}\item 
+D\+:/\+Facultate/\+OOP SEM 2/\+Project\+\_\+\+Bakery/\+Project\+\_\+\+Bakery/\mbox{\hyperlink{_u_i_8cpp}{UI.\+cpp}}\end{DoxyCompactItemize}

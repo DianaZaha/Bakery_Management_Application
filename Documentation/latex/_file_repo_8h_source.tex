@@ -1,0 +1,107 @@
+\hypertarget{_file_repo_8h_source}{}\doxysection{File\+Repo.\+h}
+\label{_file_repo_8h_source}\index{D:/Facultate/OOP SEM 2/Project\_Bakery/Project\_Bakery/FileRepo.h@{D:/Facultate/OOP SEM 2/Project\_Bakery/Project\_Bakery/FileRepo.h}}
+\mbox{\hyperlink{_file_repo_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_repo_8h}{Repo.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_pastry_8h}{Pastry.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{using }std::string;}
+\DoxyCodeLine{9 \textcolor{keyword}{using }std::ifstream;}
+\DoxyCodeLine{10 \textcolor{keyword}{using }std::ofstream;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{16 \textcolor{keyword}{template} <\textcolor{keyword}{typename} TElem>}
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_file_repo}{FileRepo}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_repo}{Repo}}<TElem> \{}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{private}:}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_file_repo_abae6271e8a2e2c9fdad4aa5131ead7a9}{filepath}}; }
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_repo_a11afd82b30b57cfdb0163805e2349797}{read\_all\_from\_file}}() \{}
+\DoxyCodeLine{29         ifstream ifs\{ this-\/>filepath \};}
+\DoxyCodeLine{30         this-\/>\mbox{\hyperlink{class_repo_aa1e2c7ea0480d769ea19601329a41881}{elems}}.clear();}
+\DoxyCodeLine{31         \textcolor{keywordflow}{if} (!ifs.is\_open())}
+\DoxyCodeLine{32             \textcolor{keywordflow}{throw} \mbox{\hyperlink{class_repo_exception}{RepoException}}(\textcolor{stringliteral}{"{}Couldn't open the file\(\backslash\)n"{}});}
+\DoxyCodeLine{33         TElem r;}
+\DoxyCodeLine{34         \textcolor{keywordflow}{while} (ifs >> r) \{}
+\DoxyCodeLine{35             this-\/>\mbox{\hyperlink{class_repo_aa1e2c7ea0480d769ea19601329a41881}{elems}}.push\_back(r);}
+\DoxyCodeLine{36         \}}
+\DoxyCodeLine{37     \};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_repo_a17d23ff15a1203881b14e3cd72addbb6}{write\_all\_to\_file}}() \{}
+\DoxyCodeLine{43         ofstream ofs\{ this-\/>filepath \};}
+\DoxyCodeLine{44         std::for\_each(this-\/>\mbox{\hyperlink{class_repo_aa1e2c7ea0480d769ea19601329a41881}{elems}}.begin(), this-\/>elems.end(), [\&](\textcolor{keyword}{const} \textcolor{keyword}{auto}\& x) \{}
+\DoxyCodeLine{45             ofs << x <<\textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{46             \});}
+\DoxyCodeLine{47     \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{keyword}{public}:}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{55     \mbox{\hyperlink{class_file_repo_a1f738490bfe220cd5570a4efbec5efd2}{FileRepo}}()}
+\DoxyCodeLine{56     \{}
+\DoxyCodeLine{57     \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{64     \mbox{\hyperlink{class_file_repo_a439f6a039152491d784eacd8f6b55483}{FileRepo}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string}\& \_filepath) :\mbox{\hyperlink{class_repo}{Repo}}<TElem>(), \mbox{\hyperlink{class_file_repo_abae6271e8a2e2c9fdad4aa5131ead7a9}{filepath}}\{ \_filepath \} }
+\DoxyCodeLine{65     \{}
+\DoxyCodeLine{66         this-\/>\mbox{\hyperlink{class_file_repo_a11afd82b30b57cfdb0163805e2349797}{read\_all\_from\_file}}();}
+\DoxyCodeLine{67     \};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{74     \mbox{\hyperlink{class_file_repo_a736ca4c9432607369645c0be6b176e90}{FileRepo}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_file_repo}{FileRepo<TElem>}}\& other) : \mbox{\hyperlink{class_repo}{Repo}}<TElem>(), \mbox{\hyperlink{class_file_repo_abae6271e8a2e2c9fdad4aa5131ead7a9}{filepath}}\{ other.\mbox{\hyperlink{class_file_repo_abae6271e8a2e2c9fdad4aa5131ead7a9}{filepath}} \} }
+\DoxyCodeLine{75     \{}
+\DoxyCodeLine{76         this-\/>\mbox{\hyperlink{class_file_repo_a11afd82b30b57cfdb0163805e2349797}{read\_all\_from\_file}}();}
+\DoxyCodeLine{77     \};}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{84     \mbox{\hyperlink{class_file_repo}{FileRepo<TElem>}}\& \mbox{\hyperlink{class_file_repo_a8711df8164ebbfa5f3e098cf49ef8f49}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_file_repo}{FileRepo<TElem>}}\& other)}
+\DoxyCodeLine{85     \{}
+\DoxyCodeLine{86         \mbox{\hyperlink{class_repo}{Repo<TElem>}}();}
+\DoxyCodeLine{87         \mbox{\hyperlink{class_file_repo_abae6271e8a2e2c9fdad4aa5131ead7a9}{filepath}} = other.\mbox{\hyperlink{class_file_repo_abae6271e8a2e2c9fdad4aa5131ead7a9}{filepath}};}
+\DoxyCodeLine{88         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{89     \};}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_repo_ae1ce2cb180f33e73285ea8157459a7b3}{add}}(\textcolor{keyword}{const} TElem\& elem)\{}
+\DoxyCodeLine{92         this-\/>\mbox{\hyperlink{class_file_repo_a11afd82b30b57cfdb0163805e2349797}{read\_all\_from\_file}}();}
+\DoxyCodeLine{93         \mbox{\hyperlink{class_repo_aa2517887769520492361fd14538f2763}{Repo<TElem>::add}}(elem);}
+\DoxyCodeLine{94         \mbox{\hyperlink{class_repo_af841a260c991846c3b6bfdeff63a2c22}{Repo<TElem>::sort}}();}
+\DoxyCodeLine{95         this-\/>\mbox{\hyperlink{class_file_repo_a17d23ff15a1203881b14e3cd72addbb6}{write\_all\_to\_file}}();}
+\DoxyCodeLine{96         this-\/>\mbox{\hyperlink{class_repo_aa1e2c7ea0480d769ea19601329a41881}{elems}}.clear();}
+\DoxyCodeLine{97     \};}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_repo_a445b07cb87bfdf3001c57f042a47a7d4}{update}}(\textcolor{keyword}{const} TElem\& elem)\{}
+\DoxyCodeLine{100         this-\/>\mbox{\hyperlink{class_file_repo_a11afd82b30b57cfdb0163805e2349797}{read\_all\_from\_file}}();}
+\DoxyCodeLine{101         \mbox{\hyperlink{class_repo_a372e46d5071fba43251d14ccb303aff3}{Repo<TElem>::update}}(elem);}
+\DoxyCodeLine{102         this-\/>\mbox{\hyperlink{class_file_repo_a17d23ff15a1203881b14e3cd72addbb6}{write\_all\_to\_file}}();}
+\DoxyCodeLine{103         this-\/>\mbox{\hyperlink{class_repo_aa1e2c7ea0480d769ea19601329a41881}{elems}}.clear();}
+\DoxyCodeLine{104     \};}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_file_repo_a64f08c047743ab0986bef174a68aff39}{remove}}(\textcolor{keyword}{const} TElem\& elem)\{}
+\DoxyCodeLine{107         this-\/>\mbox{\hyperlink{class_file_repo_a11afd82b30b57cfdb0163805e2349797}{read\_all\_from\_file}}();}
+\DoxyCodeLine{108         \mbox{\hyperlink{class_repo_a035ac7471966f1bd232c34112b705051}{Repo<TElem>::remove}}(elem);}
+\DoxyCodeLine{109         this-\/>\mbox{\hyperlink{class_file_repo_a17d23ff15a1203881b14e3cd72addbb6}{write\_all\_to\_file}}();}
+\DoxyCodeLine{110         this-\/>\mbox{\hyperlink{class_repo_aa1e2c7ea0480d769ea19601329a41881}{elems}}.clear();}
+\DoxyCodeLine{111     \};}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     \textcolor{keyword}{const} TElem\& \mbox{\hyperlink{class_file_repo_af92c04a255f1ca5beba8ca25379264bc}{search}}(\textcolor{keyword}{const} TElem\& elem)\{}
+\DoxyCodeLine{114         this-\/>\mbox{\hyperlink{class_file_repo_a11afd82b30b57cfdb0163805e2349797}{read\_all\_from\_file}}();}
+\DoxyCodeLine{115         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_repo_a385b3a394f1149b0339d731ed70a4ac7}{Repo<TElem>::search}}(elem);}
+\DoxyCodeLine{116     \};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118     \textcolor{keyword}{const} vector<TElem>\& \mbox{\hyperlink{class_file_repo_a2a888736fe0c71be3954f9b862124aed}{get\_all}}() }
+\DoxyCodeLine{119     \{}
+\DoxyCodeLine{120         this-\/>\mbox{\hyperlink{class_file_repo_a11afd82b30b57cfdb0163805e2349797}{read\_all\_from\_file}}();}
+\DoxyCodeLine{121         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_repo_a88816b52884dfd26d8e7ffb76464a42d}{Repo<TElem>::get\_all}}();}
+\DoxyCodeLine{122     \};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_file_repo_ac0253bc8b0d6732469784f310ad87ebb}{size}}()\{}
+\DoxyCodeLine{125         this-\/>\mbox{\hyperlink{class_file_repo_a11afd82b30b57cfdb0163805e2349797}{read\_all\_from\_file}}();}
+\DoxyCodeLine{126         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_repo_a923657efd2c9ff750a0df97fe6049b7f}{Repo<TElem>::size}}();}
+\DoxyCodeLine{127     \};}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129     \mbox{\hyperlink{class_file_repo_a0ac51badfb7698e38a96498e2ed66d8f}{\string~FileRepo}}()}
+\DoxyCodeLine{130     \{}
+\DoxyCodeLine{131     \};}
+\DoxyCodeLine{132 \};}
+
+\end{DoxyCode}

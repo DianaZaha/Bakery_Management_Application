@@ -1,0 +1,46 @@
+\hypertarget{_action_8h_source}{}\doxysection{Action.\+h}
+\label{_action_8h_source}\index{D:/Facultate/OOP SEM 2/Project\_Bakery/Project\_Bakery/Action.h@{D:/Facultate/OOP SEM 2/Project\_Bakery/Project\_Bakery/Action.h}}
+\mbox{\hyperlink{_action_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_pastry_8h}{Pastry.h}}"{}}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{7 \textcolor{keyword}{enum class} \mbox{\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950b}{ActionType}} \{}
+\DoxyCodeLine{8     \mbox{\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba2b2ae8740b2b5403b5075bd7cbc6ceaa}{addition}} = 0, \mbox{\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba82a519ef801aa1214f866db863f52a29}{deletion}} = 1, \mbox{\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba3ac340832f29c11538fbe2d6f75e8bcc}{update}} = 2}
+\DoxyCodeLine{9 \};}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{14 \textcolor{keyword}{template}<\textcolor{keyword}{typename} TElem>}
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_action}{Action}} \{}
+\DoxyCodeLine{16 \textcolor{keyword}{private}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950b}{ActionType}} \mbox{\hyperlink{class_action_a6dea47117d9f1fcdadbfbb00292fa03c}{Act}}; }
+\DoxyCodeLine{18     TElem \mbox{\hyperlink{class_action_a3f3394a58f6e9eeaf0c273e2e59f79e3}{Elem}}; }
+\DoxyCodeLine{19     TElem \mbox{\hyperlink{class_action_ae5d96b41badc32662b9a83a2347cd3e1}{Elem1}}; }
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_action_a472b310b0c3e8efab96d5990a924317d}{Action}}()}
+\DoxyCodeLine{26     \{}
+\DoxyCodeLine{27         \mbox{\hyperlink{class_action_a6dea47117d9f1fcdadbfbb00292fa03c}{Act}} = \mbox{\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950ba2b2ae8740b2b5403b5075bd7cbc6ceaa}{ActionType:: addition}};}
+\DoxyCodeLine{28     \}}
+\DoxyCodeLine{36     \mbox{\hyperlink{class_action_a1ed6f5ec09d91c60b0e0177fa7937d88}{Action}}(\mbox{\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950b}{ActionType}} \_Act, TElem \_Elem, TElem \_Elem1):}
+\DoxyCodeLine{37         \mbox{\hyperlink{class_action_a6dea47117d9f1fcdadbfbb00292fa03c}{Act}}\{ \_Act \}, \mbox{\hyperlink{class_action_a3f3394a58f6e9eeaf0c273e2e59f79e3}{Elem}}\{ \_Elem \}, \mbox{\hyperlink{class_action_ae5d96b41badc32662b9a83a2347cd3e1}{Elem1}}\{ \_Elem1 \}}
+\DoxyCodeLine{38     \{}
+\DoxyCodeLine{39     \}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{46     \mbox{\hyperlink{_action_8h_a21d5e8f8cdaa838586b31007df0a950b}{ActionType}} \mbox{\hyperlink{class_action_a92a92264898c2df5b785f96fde8b536a}{getAction}}()}
+\DoxyCodeLine{47     \{}
+\DoxyCodeLine{48         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_action_a6dea47117d9f1fcdadbfbb00292fa03c}{Act}};}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{56     TElem \mbox{\hyperlink{class_action_ae270a95e13b69d737b044913e5e01551}{getElem}}()}
+\DoxyCodeLine{57     \{}
+\DoxyCodeLine{58         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_action_a3f3394a58f6e9eeaf0c273e2e59f79e3}{Elem}};}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{66     TElem \mbox{\hyperlink{class_action_ac1f491f42368fe3eb6d6b8a9fcf804e6}{getElem1}}()}
+\DoxyCodeLine{67     \{}
+\DoxyCodeLine{68         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_action_ae5d96b41badc32662b9a83a2347cd3e1}{Elem1}};}
+\DoxyCodeLine{69     \}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71 \};}
+\DoxyCodeLine{72 }
+
+\end{DoxyCode}

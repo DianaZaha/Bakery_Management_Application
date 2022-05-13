@@ -1,0 +1,143 @@
+\hypertarget{_pastry_8cpp}{}\doxysection{D\+:/\+Facultate/\+OOP SEM 2/\+Project\+\_\+\+Bakery/\+Project\+\_\+\+Bakery/\+Pastry.cpp File Reference}
+\label{_pastry_8cpp}\index{D:/Facultate/OOP SEM 2/Project\_Bakery/Project\_Bakery/Pastry.cpp@{D:/Facultate/OOP SEM 2/Project\_Bakery/Project\_Bakery/Pastry.cpp}}
+{\ttfamily \#include \char`\"{}Pastry.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{_pastry_8cpp_a3327bce41bb0297c55a4772d1d754889}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{class_pastry}{Pastry}} \&pastry)
+\begin{DoxyCompactList}\small\item\em Overriden the output operator\end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{_pastry_8cpp_a5d63e1d074058f54ed5b6a9c6244bb27}{tokenize}} (string str, char delimiter)
+\begin{DoxyCompactList}\small\item\em Used to tranform a string into a vector a stringsThe functions creates a new string everytime it meets the delimiter with the content in between 2 delimiters, adding the newly formed string to the vector of strings. \end{DoxyCompactList}\item 
+istream \& \mbox{\hyperlink{_pastry_8cpp_a2e19b17d1ba76300892b3a8c17a3b9ae}{operator$>$$>$}} (istream \&is, \mbox{\hyperlink{class_pastry}{Pastry}} \&pastry)
+\begin{DoxyCompactList}\small\item\em Overriden the input operator\end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_pastry_8cpp_a5cd24f7db222d724e71d931edbd0e321}{operator==}} (const \mbox{\hyperlink{class_pastry}{Pastry}} \&Pastry1, const \mbox{\hyperlink{class_pastry}{Pastry}} \&Pastry2)
+\begin{DoxyCompactList}\small\item\em Overriden the equality operator\end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_pastry_8cpp_ab34adb79ecf923fb65bd695c542724f5}{operator$<$}} (const \mbox{\hyperlink{class_pastry}{Pastry}} \&Pastry1, const \mbox{\hyperlink{class_pastry}{Pastry}} \&Pastry2)
+\begin{DoxyCompactList}\small\item\em Overriden the \texorpdfstring{$<$}{<} operatorThe function compares the 2 pastries soly based on their id. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_pastry_8cpp_a6cef3902e69c23238018bbaf4273552f}{operator$>$}} (const \mbox{\hyperlink{class_pastry}{Pastry}} \&Pastry1, const \mbox{\hyperlink{class_pastry}{Pastry}} \&Pastry2)
+\begin{DoxyCompactList}\small\item\em Overriden the \texorpdfstring{$<$}{<} operatorThe function compares the 2 pastries soly based on their id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_pastry_8cpp_ab34adb79ecf923fb65bd695c542724f5}\label{_pastry_8cpp_ab34adb79ecf923fb65bd695c542724f5}} 
+\index{Pastry.cpp@{Pastry.cpp}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Pastry.cpp@{Pastry.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pastry}{Pastry}} \&}]{Pastry1,  }\item[{const \mbox{\hyperlink{class_pastry}{Pastry}} \&}]{Pastry2 }\end{DoxyParamCaption})}
+
+
+
+Overriden the \texorpdfstring{$<$}{<} operatorThe function compares the 2 pastries soly based on their id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Pastry1} & \\
+\hline
+{\em Pastry2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_pastry_8cpp_a3327bce41bb0297c55a4772d1d754889}\label{_pastry_8cpp_a3327bce41bb0297c55a4772d1d754889}} 
+\index{Pastry.cpp@{Pastry.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Pastry.cpp@{Pastry.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_pastry}{Pastry}} \&}]{pastry }\end{DoxyParamCaption})}
+
+
+
+Overriden the output operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & ostrem \\
+\hline
+{\em pastry} & curent pastry \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ostream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_pastry_8cpp_a5cd24f7db222d724e71d931edbd0e321}\label{_pastry_8cpp_a5cd24f7db222d724e71d931edbd0e321}} 
+\index{Pastry.cpp@{Pastry.cpp}!operator==@{operator==}}
+\index{operator==@{operator==}!Pastry.cpp@{Pastry.cpp}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pastry}{Pastry}} \&}]{Pastry1,  }\item[{const \mbox{\hyperlink{class_pastry}{Pastry}} \&}]{Pastry2 }\end{DoxyParamCaption})}
+
+
+
+Overriden the equality operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em Pastry1} & \\
+\hline
+{\em Pastry2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_pastry_8cpp_a6cef3902e69c23238018bbaf4273552f}\label{_pastry_8cpp_a6cef3902e69c23238018bbaf4273552f}} 
+\index{Pastry.cpp@{Pastry.cpp}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Pastry.cpp@{Pastry.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pastry}{Pastry}} \&}]{Pastry1,  }\item[{const \mbox{\hyperlink{class_pastry}{Pastry}} \&}]{Pastry2 }\end{DoxyParamCaption})}
+
+
+
+Overriden the \texorpdfstring{$<$}{<} operatorThe function compares the 2 pastries soly based on their id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Pastry1} & \\
+\hline
+{\em Pastry2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_pastry_8cpp_a2e19b17d1ba76300892b3a8c17a3b9ae}\label{_pastry_8cpp_a2e19b17d1ba76300892b3a8c17a3b9ae}} 
+\index{Pastry.cpp@{Pastry.cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Pastry.cpp@{Pastry.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is,  }\item[{\mbox{\hyperlink{class_pastry}{Pastry}} \&}]{pastry }\end{DoxyParamCaption})}
+
+
+
+Overriden the input operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & istream \\
+\hline
+{\em pastry} & The pastry that is curently inputed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+is istream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_pastry_8cpp_a5d63e1d074058f54ed5b6a9c6244bb27}\label{_pastry_8cpp_a5d63e1d074058f54ed5b6a9c6244bb27}} 
+\index{Pastry.cpp@{Pastry.cpp}!tokenize@{tokenize}}
+\index{tokenize@{tokenize}!Pastry.cpp@{Pastry.cpp}}
+\doxysubsubsection{\texorpdfstring{tokenize()}{tokenize()}}
+{\footnotesize\ttfamily vector$<$ string $>$ tokenize (\begin{DoxyParamCaption}\item[{string}]{str,  }\item[{char}]{delimiter }\end{DoxyParamCaption})}
+
+
+
+Used to tranform a string into a vector a stringsThe functions creates a new string everytime it meets the delimiter with the content in between 2 delimiters, adding the newly formed string to the vector of strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & the string that should be broken off \\
+\hline
+{\em delimiter} & the character at which the string is broken off \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector of strings 
+\end{DoxyReturn}
