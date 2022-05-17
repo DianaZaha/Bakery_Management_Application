@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Action.h" />
+    <ClInclude Include="Controller.h" />
     <ClInclude Include="FileRepo.h" />
     <ClInclude Include="FilteringCriteria.h" />
     <ClInclude Include="Pastry.h" />
@@ -151,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Action.cpp" />
+    <ClCompile Include="Controller.cpp" />
     <ClCompile Include="FileRepo.cpp" />
     <ClCompile Include="FilteringCriteria.cpp" />
     <ClCompile Include="Pastry.cpp" />
@@ -164,6 +166,10 @@
   <ItemGroup>
     <None Include="BakeryInfo.csv" />
     <None Include="README.md" />
+    <None Include="teste.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="trying.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,0 +1,12 @@
+6,StrawberyPie,40,80,600,sweet
+4,Chocolate Croisant,20,15.7,400,sweet
+4,Chocolate Croisant,60,14,40,sweet
+4,Chocolate Croisant,20,15.7,400,sweet
+
+1,Cinnamon Bun,100,5.9,230,sweet
+2,Cheese Croisant,130,14.7,150,salty
+3,Struddle,50,12.8,334.5,sweet
+4,Chocolate Croisant,20,15.7,400,sweet
+5,Apple Pie,40,50,400,sweet
+
+3,Struddle,100,100,1000,sweet

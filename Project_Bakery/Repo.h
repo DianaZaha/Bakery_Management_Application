@@ -31,7 +31,7 @@ public:
     virtual void add(const TElem& elem) {
         auto it = std::find(this->elems.begin(), this->elems.end(), elem);
         if (it != this->elems.end()) {
-            throw RepoException("existent elem!\n");
+            throw RepoException("existent element!\n");
         }
         this->elems.push_back(elem);
     };
@@ -46,7 +46,7 @@ public:
     virtual void update(const TElem& elem) {
         auto it = std::find(this->elems.begin(), this->elems.end(), elem);
         if (it == this->elems.end()) {
-            throw RepoException("inexistent elem!\n");
+            throw RepoException("inexistent element!\n");
         }
         this->elems[it - this->elems.begin()] = elem;
     };
@@ -60,7 +60,7 @@ public:
     virtual void remove(const TElem& elem) {
         auto it = std::find(this->elems.begin(), this->elems.end(), elem);
         if (it == this->elems.end()) {
-            throw RepoException("elem inexistent!\n");
+            throw RepoException("inexistent element!\n");
         }
         this->elems.erase(it);
     };
@@ -82,7 +82,7 @@ public:
     virtual const TElem& search(const TElem& elem) {
         auto it = std::find(this->elems.begin(), this->elems.end(), elem);
         if (it == this->elems.end()) {
-            throw RepoException("elem inexistent!\n");
+            throw RepoException("inexistent element!\n");
         }
         return *it;
     };

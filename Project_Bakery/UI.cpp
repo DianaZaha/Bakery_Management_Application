@@ -122,7 +122,6 @@ void UI::printvector(const vector<Pastry>& vector)
  * Shows the Filtering Menu to the user.
  *
  */
-
 void UI::printfiltermenu()
 {
 	cout << "!Please note that this filter won't affect the data in the file!\n";
@@ -141,9 +140,6 @@ void UI::printfiltermenu()
  */
 void UI::filter()
 {
-	vector<Pastry> Filtered;
-	Filtered = Bakery.get_all();
-	FilteringCriteria Filter(Filtered);
 	printfiltermenu();
 	char ch;
 	cin >> ch;
@@ -153,42 +149,35 @@ void UI::filter()
 		string name;
 		cout << "Introduce name: ";
 		cin >> name;
-		printvector(Filter.FilterByName(name));
+		printvector(C.FilterByName(name));
 	}
 	if (ch == 'P' || ch == 'p')
 	{
 		float price;
 		cout << "Introduce price: ";
 		cin >> price;
-		printvector(Filter.FilterByPrice(price));
+		printvector(C.FilterByPrice(price));
 	}
 	if (ch == 'S' || ch == 's')
 	{
 		float sugar;
 		cout << "Introduce sugar: ";
 		cin >> sugar;
-		printvector(Filter.FilterBySugar(sugar));
+		printvector(C.FilterBySugar(sugar));
 	}
 	if (ch == 'K' || ch == 'k')
 	{
 		int stock;
 		cout << "Introduce stock: ";
 		cin >> stock;
-		printvector(Filter.FilterByStock(stock));
+		printvector(C.FilterByStock(stock));
 	}
 	if (ch == 'T' || ch == 't')
 	{
 		std:: string type;
 		cout << "Introduce type: ";
 		cin >> type;
-		PastryType t = PastryType::sweet;
-		if (type == "sweet")
-			t = PastryType::sweet;
-		if (type == "salty")
-			t = PastryType::salty;
-		if (type == "bread")
-			t = PastryType::bread;
-		printvector(Filter.FilterByType(t));
+		printvector(C.FilterByType(type));
 	}
 }
 
@@ -199,38 +188,34 @@ void UI::filter()
 
 void UI::sort()
 {
-	vector<Pastry> Sorted;
-	Sorted = Bakery.get_all();
-	SortingCriteria Sorting(Sorted);
 	printsortmenu();
 	char ch;
 	cin >> ch;
 	cout << "\n";
 	if (ch == 'I' || ch == 'i')
 	{
-		printvector(Sorted);
+		printvector(C.GetContent());
 	}
 	if (ch == 'N' || ch == 'n')
 	{
-		printvector(Sorting.SortByName());
+		printvector(C.SortByName());
 	}
 	if (ch == 'K' || ch == 'k')
 	{
-		printvector(Sorting.SortByStock());
+		printvector(C.SortByStock());
 	}
 	if (ch == 'P' || ch == 'p')
 	{
-		printvector(Sorting.SortByPrice());
+		printvector(C.SortByPrice());
 	}
 	if (ch == 'S' || ch == 's')
 	{
-		printvector(Sorting.SortBySugar());
+		printvector(C.SortBySugar());
 	}
 	if (ch == 'T' || ch == 't')
 	{
-		printvector(Sorting.SortByType());
+		printvector(C.SortByType());
 	}
-	
 }
 
 /**
@@ -239,33 +224,11 @@ void UI::sort()
  */
 UI::UI()
 {
-	Bakery = FileRepo<Pastry>("");
+	C = Controller("BakeryInfo.csv");
 }
-
-/**
- * A constructor.
- * 
- * Takes the filepath given and creates a FileRepo on which the UI will operate
- * @note The user can only modify the content from the CSV given only at add, delete, update, undo() and redo()
- * \param filepath the filepath to the CSV document that the UI operates on
- */
-UI::UI(std::string filepath)
-{
-	Bakery = FileRepo<Pastry>(filepath);
-}
-
-/**
- * Calls the functions which perform the desired operation on FileRepo.
- * 
- * This function allows the user to input a character that will lead to an action being performed on the FileRepo
- * The user can add, delete, update, an element , these action can be reversed by using undo and redo
- * The user can sort and filter the elements but the data from the CSV file won't be changed
- */
 
 void UI::displayMenu()
 {
-	stack<Action<Pastry>> Undo;
-	stack<Action<Pastry>> Redo;
 	int x = 1;
 	char ch;
 	while (x)
@@ -277,52 +240,83 @@ void UI::displayMenu()
 		if (ch == 'A' || ch == 'a')
 		{
 			
-			add(Undo);
-			Redo = stack<Action<Pastry>>();
+			cout << "Introduce your new Pastry\n";
+			std::string s;
+			cin >> s;
+			Pastry A;
+			A = readPastry(s);
+			try {
+				C.add(A);
+			}
+			catch (const RepoException&)
+			{
+				cout << "This Pastry already exist, you can update it ^-^\n";
+			}
+			cout << "Change made succesfully!\n";
 			
 		}
 		if (ch == 'M' || ch == 'm')
 		{
 			
-			update(Undo);
-			Redo = stack<Action<Pastry>>();
+			cout << "Introduce your modified Pastry\n";
+			std::string s;
+			cin >> s;
+			Pastry A;
+			A = readPastry(s);
+			try {
+				C.update(A);
+			}
+			catch (const RepoException&)
+			{
+				cout << "This Pastry doesn't exist, you can add it^-^\n";
+			}
+			cout << "Change made succesfully!\n";
 		}
 		if (ch == 'D' || ch == 'd')
 		{
 			
-			del(Undo);
-			Redo = stack<Action<Pastry>>();
+			cout << "Which Pastry would you want to delete (only Id needed)\n";
+			string s;
+			cin >> s;
+			
+			try {
+				C.del(Pastry(s, "", 0, 0.0, 0.0, PastryType::sweet));
+			}
+			catch (const RepoException&)
+			{
+				cout << "This Pastry doesn't exist, you can add it^-^\n";
+			}
+			cout << "Change made succesfully!\n";
 			
 		}
 		if (ch == 'U' || ch == 'u')
 		{
-			if (Undo.empty())
-				cout << "Sorry, you cannot undo anymore :(\n";
-			else {
-				Action<Pastry> current = Undo.top();
-				Undo.pop();
-				Redo.push(current);
-				undo(current);
+			
+			try {
+				C.undo();
 			}
+			catch (const RepoException&)
+			{
+				cout << "You cannot undo anymore\n";
+			}
+			cout << "Undo made succesfully!\n";
 
 		}
 		if (ch == 'R' || ch == 'r')
 		{
-			if (Redo.empty())
-				cout << "Sorry, you cannot redo anymore :(\n";
-			else {
-				Action<Pastry> current = Redo.top();
-				Redo.pop();
-				Undo.push(current);
-				redo(current);
+			try {
+				C.redo();
 			}
+			catch (const RepoException&)
+			{
+				cout << "You cannot undo anymore\n";
+			}
+			cout << "Undo made succesfully!\n";
 
 		}
 		if (ch == 'G' || ch == 'g')
 		{
-			vector<Pastry> All;
-			All = Bakery.get_all();
-			printvector(All);
+			printvector(C.GetContent());
 		}
 		if (ch == 'F' || ch == 'f')
 			filter();
@@ -334,127 +328,3 @@ void UI::displayMenu()
 	}
 	
 }
-
-/** Removes a Pastry from the FileRepo
- * .
- * It asks the user for an Id and creates a dummy Pastry with that it.
- * The dummy is passed to the remove function which only compares the Id's of the Pastries.
- * If the Pastry is not already there, it will warn the user.
- * Then we add to the top of the stack of Undo actions the actions it just performed.
- * \param Undo the stack of action previously taken by the user on he FileRepo
- */
-void UI::del(stack<Action<Pastry>>& Undo)
-{
-	cout << "Which Pastry would you want to delete (only Id needed)\n";
-	string s;
-	cin >> s;
-	Pastry Dummy(s, "", 0, 0.0, 0.0, PastryType::sweet);
-	Pastry Old;
-	try {
-		Old = this->Bakery.search(Dummy);
-		this->Bakery.remove(Dummy);
-		}
-	catch (const RepoException&)
-	{
-		cout << "This Pastry doesn't exist, you can add it^-^\n";
-	}
-	cout << "Change made succesfully!\n";
-	Undo.push(Action<Pastry>(ActionType::deletion, Old, Dummy));
-}
-
-/**
- * Adds new pastry to the FileRepo
- * .
- * It reads a line from the user then creates a Pastry to match it.
- * It tries to add the Pastry in the FileRepo.
- * If the Pastry is already there, it will warn the user.
- * Then is adds to the top of the stack of Undo actions the actions it just performed,
- * 
- * \param Undo the stack of action previously taken by the user on the FileRepo
- */
-void UI::add(stack<Action<Pastry>>& Undo)
-{
-	cout << "Introduce your new Pastry\n";
-	std::string s;
-	cin >> s;
-	Pastry A;
-	A = readPastry(s);
-	try {
-		this->Bakery.add(A);
-	}
-	catch (const RepoException&)
-	{
-	cout << "This Pastry already exist, you can update it ^-^\n";
-	}
-	cout << "Change made succesfully!\n";
-	Pastry Dummy;
-	Undo.push(Action<Pastry>(ActionType::addition, A, Dummy));
-}
-
-/** Updates a Pastry with new Stats
- * .
- * It read a line from the user and transforms it into a Pastry.
- * The Pastry that have been read must have the Id of one of the Pastry in the FileRepo.
- * If it doesn't exsit such a pastry, the user will be warned.
- * If the change have been made usccesfully, it adds the action and both the new and the old element to the Undo Stack.
- * \param Undo the stack of action previously taken by the user on he FileRepo
- */
-void UI::update(stack<Action<Pastry>>& Undo)
-{
-	cout << "Introduce your modified Pastry\n";
-	std::string s;
-	cin >> s;
-	Pastry A;
-	A = readPastry(s);
-	Pastry Old;
-	try {
-		Old = this->Bakery.search(A);
-		this->Bakery.update(A);
-	}
-	catch (const RepoException&)
-	{ 
-		cout << "This Pastry doesn't exist, you can add it^-^\n";
-	}
-	Undo.push(Action<Pastry>(ActionType::addition, A, Old));
-	cout << "Change made succesfully!\n";
-}
-
-/**
- * Used to undo an action.
- * 
- * To undo an action you have to do the oposite of the action given, accordingly to the indicated ActionType
- * \param Act the action that should be undone
- */
-void UI::undo(Action<Pastry>& Act)
-{
-	ActionType Type = Act.getAction();
-	Pastry Elem = Act.getElem();
-	if (Type == ActionType::addition)
-		this->Bakery.remove(Elem);
-	if (Type == ActionType::deletion)
-		this->Bakery.add(Elem);
-	if (Type == ActionType::update)
-		this->Bakery.update(Elem);
-	cout << "Undo made succesfully!\n";
-}
-
-/**
- * Used to redo an action.
- *
- * To redo is just and undo of an undo, so we have to act accordingly to the indicated ActionType
- * \param Act the action that should be redone
- */
-void UI::redo(Action<Pastry>& Act)
-{
-	ActionType Type = Act.getAction();
-	Pastry Elem = Act.getElem();
-	Pastry Old = Act.getElem1();
-	if (Type == ActionType::addition)
-		this->Bakery.add(Elem);
-	if (Type == ActionType::deletion)
-		this->Bakery.remove(Elem);	
-	if (Type == ActionType::update)
-		this->Bakery.update(Old);
-	cout << "Redo made succesfully!\n";
-}
-

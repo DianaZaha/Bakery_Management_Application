@@ -53,8 +53,8 @@ vector<Pastry> FilteringCriteria::FilterByPrice(float _price)
 {
 	vector<Pastry> rez;
 	vector<Pastry> all = repo.get_all();
-	std::copy_if(all.begin(), all.end(), std::back_inserter(rez), [_price](const auto& x) {
-		return (fabs(x.getPrice() - _price) < 0.01);
+	std::copy_if(all.begin(), all.end(), std::back_inserter(rez), [&_price](const auto& x) {
+		return _price > x.getPrice();
 		});
 	return rez;
 }
@@ -68,8 +68,8 @@ vector<Pastry> FilteringCriteria::FilterBySugar(float _sugar)
 {
 	vector<Pastry> rez;
 	vector<Pastry> all = repo.get_all();
-	std::copy_if(all.begin(), all.end(), std::back_inserter(rez), [_sugar](const auto& x) {
-		return (fabs(x.getSugar() - _sugar) < 0.01);
+	std::copy_if(all.begin(), all.end(), std::back_inserter(rez), [&_sugar](const auto& x) {
+		return x.getSugar() < _sugar;
 		});
 	return rez;
 }

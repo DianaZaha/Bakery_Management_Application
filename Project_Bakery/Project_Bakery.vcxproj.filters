@@ -78,6 +78,9 @@
     <ClCompile Include="Action.cpp">
       <Filter>Source Files\Persitency</Filter>
     </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Pastry.h">
@@ -107,11 +110,22 @@
     <ClInclude Include="Action.h">
       <Filter>Header Files\Persistency</Filter>
     </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
     <None Include="BakeryInfo.csv">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="teste.csv">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="trying.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

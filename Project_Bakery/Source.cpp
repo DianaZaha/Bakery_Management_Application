@@ -7,7 +7,7 @@ int main() {
     Tests t;
     t.TestAll();
 
-    UI U("BakeryInfo.csv");
+    UI U;
     U.displayMenu();
     return 0;
 }

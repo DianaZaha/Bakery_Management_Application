@@ -12,6 +12,7 @@ using std::stack;
 #include "Action.h"
 #include "FilteringCriteria.h"
 #include "SortingCriteria.h"
+#include "Controller.h"
 
 /**
  * Class that manages the User Interface in the Console.
@@ -19,9 +20,8 @@ using std::stack;
 class UI
 {
 private:
-
-	FileRepo<Pastry> Bakery; /** The FileRepo that this UI allows the user to perform operations on */ 
 	
+	Controller C;
 	Pastry readPastry(std::string&);
 
 	//these do not need a undo/redo function
@@ -31,15 +31,7 @@ private:
 	static void printfiltermenu();
 	void filter();
 	void sort();
-
-	//these need a undo/redo function
-	void del(stack<Action<Pastry>>&);
-	void add(stack<Action<Pastry>>&);
-	void update(stack<Action<Pastry>>&);
-	void undo(Action<Pastry>&);
-	void redo(Action<Pastry>&);
 public:
 	UI();
-	UI(std::string);
 	void displayMenu();
 };
